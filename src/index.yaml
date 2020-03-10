@@ -1,4 +1,4 @@
-ProjectTitle: template
+ProjectTitle: aupair
 
 PageList:
-- file: page.html
+- file: home.html

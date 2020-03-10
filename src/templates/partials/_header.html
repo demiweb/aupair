@@ -1,5 +1,39 @@
 <!-- begin header -->
 <header class="header">
-  hello from header
+  <div class="header__top">
+    <div class="header__top-in">
+      {{ mixins.list(
+        name = 'social',
+        modifications = { wrap: '', list: 'header__social social', item: 'social__item', link: 'social__link' },
+        list = [
+          { link: mixins.icon('facebook') }
+        ]
+      ) }}
+      
+      <ul class="header__contacts">
+        <li class="header__contact"><a href="mailto:danny@icec.co.il">{{ mixins.icon('email') }}danny@icec.co.il</a></li>
+        <li class="header__contact"><a href="tel:03-5281114">{{ mixins.icon('phone') }}03-5281114</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="header__bottom">
+   <a href="/" class="header__logo logo">
+     <img class="js-lazy" alt="" src="" data-src="./img/logo.png"/>
+   </a>
+
+    {{ mixins.list(
+      name = 'nav',
+      modifications = { wrap: '', item: '', link: '' },
+      list = [
+        { link: 'רשק תריצי ' },
+        { link: 'ףסונ עדימ ' },
+        { link: 'תוצלמה ך' },
+        { link: 'ילהתה ה' },
+        { link: 'קירמאב רפוא   ' },
+        { link: 'English' }
+      ]
+    ) }}
+  </div>
 </header>
 <!-- end header -->

@@ -1,5 +1,23 @@
 <!-- begin footer -->
 <footer class="footer">
-  hello from footer
+  <div class="footer__inner">
+   {{ mixins.list(
+     name = 'footer__meta',
+     modifications = { wrap: '',  item: '', link: '' },
+     list = [
+       { item: 'לארשי ףינס ,הקירמא ןיא רפוא' },
+       { item: "(יטיס המיניסה דיל) ןויצל ןושאר ,4 רייאב 'ה בוחר" },
+       { item: 'Danny@icec.co.il :ליימ | 03-5281119 :סקפ | 035281114 :ןופלט' }
+     ]
+   ) }}
+
+    {{ mixins.list(
+        name = 'social',
+        modifications = { wrap: '', list: 'footer__social social', item: 'social__item', link: 'social__link' },
+        list = [
+          { link: mixins.icon('facebook') }
+        ]
+      ) }}
+  </div>
 </footer>
 <!-- end footer -->
