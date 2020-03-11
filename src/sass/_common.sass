@@ -21,4 +21,35 @@ body
   $this: &
   &--loaded:not(#{$this}--no-fade-in)
     animation: fadeIn 1s
+
+.quote
+  color: $c-text
+  font-size: rem(336)
+  width: em(754, 336)
+  height: 1em
+
+  padding: em(55, 336) em(55, 336) em(110, 336)
+
+  +image('Union.svg')
+  background-repeat: no-repeat
+  background-position: 50% 50%
+  background-size: contain
+
+  &__inner
+    font-size: rem(30)
+
+
+.section-block
+  +notlast
+    margin-bottom: rem(15)
+    
+  &__title
+    margin-bottom: rem(16)
+
+  &__text
+    font-weight: 400
+
+.section-btn
+  color: $white
+  text-align: center
     

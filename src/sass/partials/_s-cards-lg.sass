@@ -1,0 +1,80 @@
+.s-cards-lg
+  $grid-gap: rem(24)
+
+  padding-left: $grid-gap / 2
+  padding-right: $grid-gap / 2
+  padding-top: rem(30)
+  padding-bottom: rem(120)
+
+.cards  
+  $grid-gap: rem(24)
+
+  display: flex
+  margin-left: ($grid-gap / 2) * -1
+  margin-right: ($grid-gap / 2) * -1
+  &__item
+    width: calc(33.33333% - #{$grid-gap})
+    margin-left: $grid-gap / 2
+    margin-right: $grid-gap / 2
+
+.card
+  $this: &
+  color: $white
+  position: relative
+
+  +before
+    position: absolute
+    z-index: 0
+    top: 0
+    left: 0
+    right: 0
+    height: 50%
+
+    background-color: $accent
+
+  &__inner
+    display: flex
+    flex-direction: column
+    height: 100%
+
+    position: relative
+    z-index: 1
+
+    text-align: center    
+
+    padding: rem(24) rem(7) 0
+
+  &__title
+    margin-bottom: rem(38)
+
+  &__text
+    flex-grow: 1
+    margin-bottom: rem(24)
+
+  &__img
+    +cover
+    background-color: $dark-aux
+    padding-top: percentage(487 / 381)
+
+    margin-bottom: rem(24)
+    margin-left: auto
+    margin-right: auto
+    width: 100%
+    max-width: calc(100% - #{rem(80)})
+
+    color: rgba($accent, .5)
+
+    box-shadow: 0 10px 10px -3px currentColor
+
+  &--accent-thrd
+    color: $dark-aux
+    +before
+      background-color: $accent-thrd
+    #{$this}__img
+      color: rgba($accent-thrd, .5)
+
+  &--accent-sec
+    +before
+      background-color: $accent-sec
+    #{$this}__img
+      color: rgba($accent-sec, .5)

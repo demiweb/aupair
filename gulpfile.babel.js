@@ -6,7 +6,7 @@ const getTaskWatch = (task) => require(`./gulp/tasks/${task}`).watch(gulp);
 
 gulp.task('clean', getTaskBuild('clean'));
 gulp.task('svgicons', getTaskBuild('svgicons'));
-// gulp.task('sprite-png', getTaskBuild('sprite-png'));
+gulp.task('sprite-png', getTaskBuild('sprite-png'));
 gulp.task('copy', getTaskBuild('copy'));
 gulp.task('server', () => getTaskBuild('server'));
 gulp.task('nunjucks', () => getTaskBuild('nunjucks'));
@@ -17,7 +17,7 @@ gulp.task('webpack', getTaskBuild('webpack'));
 
 gulp.task('copy:watch', getTaskWatch('copy'));
 gulp.task('svgicons:watch', getTaskWatch('svgicons'));
-// gulp.task('sprite-png:watch', getTaskWatch('sprite-png'));
+gulp.task('sprite-png:watch', getTaskWatch('sprite-png'));
 gulp.task('nunjucks:watch', getTaskWatch('nunjucks'));
 gulp.task('sass:watch', getTaskWatch('sass'));
 gulp.task('svgo:watch', getTaskWatch('svgo'));
@@ -42,7 +42,7 @@ gulp.task(
     setmodeProd,
     'clean',
     'svgicons',
-    // 'sprite-png',
+    'sprite-png',
     'svgo',
     'sass',
     'nunjucks',
@@ -58,7 +58,7 @@ gulp.task(
     setmodeDev,
     'clean',
     'svgicons',
-    // 'sprite-png',
+    'sprite-png',
     'svgo',
     'sass',
     'nunjucks',
@@ -73,7 +73,7 @@ gulp.task(
   gulp.parallel(
     'copy:watch',
     'svgicons:watch',
-    // 'sprite-png:watch',
+    'sprite-png:watch',
     'nunjucks:watch',
     'svgo:watch',
     'list-pages:watch',

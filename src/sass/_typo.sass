@@ -1,8 +1,54 @@
-// small
-//   font-size: inherit
-
-// h1, h2, h3, h4, h5, h6
-//   font-weight: 400
-
 .title
-  +css-lock(21, 45, 320, 1399, font-size)
+  display: block
+  text-transform: uppercase
+
+  &--h1
+    font-size: em(60)
+
+  &--h2
+    font-size: em(36)
+
+  &--h3
+    font-size: em(26)
+
+  &--h4
+    font-size: em(18)
+
+  &--h5
+    font-size: em(16)
+
+  &--shadow
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.35)
+
+  &--accent
+    color: $accent
+
+  &--accent-sec
+    color: $accent-sec
+
+  &--accent-thrd
+    color: $accent-thrd
+
+
+.text
+  p
+    +notlast
+      margin-bottom: rem(16)
+
+  &--shadow
+    @extend .title--shadow
+
+  &--400
+    font-weight: 400
+
+.order-list
+  +counter('order', '.')
+  +notlast
+    margin-bottom: rem(40)
+  &__item
+    font-weight: 400
+    &::before
+      color: $accent-sec
+      font-size: em(30)
+      font-weight: 700
+

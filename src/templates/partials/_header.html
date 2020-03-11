@@ -11,29 +11,32 @@
       ) }}
       
       <ul class="header__contacts">
-        <li class="header__contact"><a href="mailto:danny@icec.co.il">{{ mixins.icon('email') }}danny@icec.co.il</a></li>
-        <li class="header__contact"><a href="tel:03-5281114">{{ mixins.icon('phone') }}03-5281114</a></li>
+        <li class="header__contact"><a href="tel:03-5281114">03-5281114 {{ mixins.icon('phone') }}</a></li>
+        <li class="header__contact"><a href="mailto:danny@icec.co.il">danny@icec.co.il {{ mixins.icon('email') }}</a></li>
+        
       </ul>
     </div>
   </div>
 
   <div class="header__bottom">
-   <a href="/" class="header__logo logo">
-     <img class="js-lazy" alt="" src="" data-src="./img/logo.png"/>
-   </a>
+    <div class="header__bottom-in">
+     <a href="/" class="header__logo logo">
+       <img class="js-lazy" alt="" src="" data-src="./img/logo.png"/>
+     </a>
 
-    {{ mixins.list(
-      name = 'nav',
-      modifications = { wrap: '', item: '', link: '' },
-      list = [
-        { link: 'רשק תריצי ' },
-        { link: 'ףסונ עדימ ' },
-        { link: 'תוצלמה ך' },
-        { link: 'ילהתה ה' },
-        { link: 'קירמאב רפוא   ' },
-        { link: 'English' }
-      ]
-    ) }}
+      {{ mixins.list(
+        name = 'nav',
+        modifications = { wrap: '', item: '', link: '' },
+        list = [
+          { link: 'רשק תריצי ', modItem: 'nav__current-item' },
+          { link: 'ףסונ עדימ ' },
+          { link: 'תוצלמה ך' },
+          { link: 'ילהתה ה' },
+          { link: 'קירמאב רפוא   ' },
+          { link: 'English' }
+        ]
+      ) }}
+    </div>
   </div>
 </header>
 <!-- end header -->

@@ -1,0 +1,58 @@
+.s-photos-cards
+  padding-top: rem(49)
+  padding-left: rem(25)
+  padding-right: rem(25)
+  padding-bottom: rem(50)
+
+.photos-cards
+  $grid-gap: rem(25)
+
+  display: flex
+  flex-wrap: wrap
+  margin-left: ($grid-gap / 2) * -1
+  margin-right: ($grid-gap / 2) * -1
+
+  &__item
+    width: 33.33333%
+    padding-left: $grid-gap / 2
+    padding-right: $grid-gap / 2
+    margin-bottom: rem(68)
+
+.photo-card
+  display: flex
+  position: relative
+  padding: rem(39) rem(27) rem(39) 0
+  color: $white
+
+  +before
+    position: absolute
+    z-index: 0
+    top: 0
+    bottom: 0
+    right: 0
+    left: rem(65)
+    background-color: $accent
+
+  &__img
+    +cover
+    display: block
+    width: 100%
+    background-color: $dark-aux
+    padding-top: percentage(311 / 415)
+    position: relative
+    z-index: 1
+
+  &__title
+    position: absolute
+    bottom: rem(5)
+    left: rem(70)
+    z-index: 1
+
+  &--accent-thrd
+    color: $c-text
+    +before
+      background-color: $accent-thrd
+
+  &--accent-sec
+    +before
+      background-color: $accent-sec

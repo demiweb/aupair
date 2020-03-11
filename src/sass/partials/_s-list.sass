@@ -1,0 +1,26 @@
+.s-list
+  &__img
+    position: relative
+    padding-left: rem(15)
+    padding-bottom: rem(20)
+    margin-bottom: rem(52)
+    
+    +before
+      position: absolute
+      z-index: 0
+      bottom: 0
+      left: 0
+      top: rem(60)
+      right: rem(20)
+      background-color: $accent-sec
+
+    img
+      position: relative
+      z-index: 1
+      width: 100%
+
+  &__subttl
+    margin-bottom: rem(40)
+
+  &__inner
+    padding: 0 rem(65) rem(50)

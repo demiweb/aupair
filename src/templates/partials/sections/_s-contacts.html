@@ -1,0 +1,45 @@
+{%set
+contacts = [
+  {
+    mod: 'contact--accent-thrd',
+    iconPng: true,
+    icon: 'pen.png',
+    text: 'ךילהתה לע םיפסונ םיטרפל המשרהלו',
+    textMod: 'text--shadow'
+  },
+  {
+    mod: 'contact--accent-sec',
+    icon: 'email',
+    text: '?הלאש ךל שי םויה ליימ ונל יחלש'
+  },
+  {
+    mod: '',
+    icon: 'facebook',
+    text: 'לואשלו בוקעל תנמזומ ונלש קובסייפב םג'    
+  }
+]
+%}
+
+<!-- begin s-contacts -->
+<section class="s-contacts">
+  <div class="s-contacts__inner">
+    {% for i in contacts %}
+    <div class="s-contacts__item">
+      <!-- begin contact -->
+      <div class="contact{% if i.mod %} {{ i.mod }}{% endif %}">
+        <div class="contact__icon">
+          {% if i.iconPng %}
+          <img class="js-lazy" alt="" src="" data-src="./img/{{ i.icon }}"/>
+          {% else %}
+          {{ mixins.icon(i.icon) }}
+          {% endif %}
+        </div>
+
+        <div class="contact__text{% if i.textMod %} {{ i.textMod }}{% endif %}">{{ i.text | safe }}</div>
+      </div>
+      <!-- end contact -->
+    </div>
+    {% endfor %}
+  </div>
+</section>
+<!-- end s-contacts -->

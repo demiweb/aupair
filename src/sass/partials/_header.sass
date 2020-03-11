@@ -1,0 +1,74 @@
+.header
+  position: relative
+  z-index: 10
+  overflow: hidden
+
+  &__top
+    background-color: $accent
+    position: relative
+    z-index: 1
+    color: $white
+
+  &__top-in
+    display: flex
+    align-items: center
+
+    padding: rem(10) rem(35)
+
+    height: $header-top-height
+
+  &__bottom
+    background-color: $white
+    position: relative
+    z-index: 2
+
+    +before
+      position: absolute
+      z-index: 0
+      top: rem(-40)
+      left: 50%
+      transform: translate(-50%, 0)
+
+      width: rem(250)
+      height: rem(250)
+
+      background-color: $white
+      border-radius: 50%
+
+
+  &__bottom-in
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    
+    position: relative
+    z-index: 1
+    padding: rem(10) rem(35) 0
+    height: $header-bottom-height
+
+  &__logo
+    display: block
+    margin-left: auto
+    margin-right: auto
+    width: rem(163)
+
+    margin-top: rem(-30)
+    margin-bottom: rem(10)
+
+  &__contacts
+    display: flex
+    align-items: center
+    justify-content: flex-end
+
+    flex-grow: 1
+    font-size: em(18)
+
+  &__contact
+    +notlast
+      margin-left: rem(60)
+    a
+      display: inline-flex
+      align-items: center
+      .icon
+        font-size: 1.4em
+        margin-right: .5em

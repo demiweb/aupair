@@ -1,0 +1,34 @@
+<!-- begin s-slider -->
+<section class="s-slider">
+  <!-- begin slider -->
+  <div class="slider__wrap">
+    <div class="slider js-slider" data-slider="home">
+      {# {% for i in range(0, 4) %} #}
+      <div class="slide home-slide">
+        <div class="home-slide__img">
+          <img class="js-lazy" alt="" src="" data-src="./img/image-8.png"/>
+        </div>
+
+        <div class="home-slide__content">
+          <div class="home-slide__quote quote">
+            <div class="quote__inner">
+              !ןהילע התמ ינא ...םיסקמ היה תודליה םע ילש רשקה” .םישדח תומוקמ יתיאורו ןומה יתלייט “!הנוכנה הריחבה תא יתישעש קפס יל ןיא  
+            </div>
+          </div>
+          
+          <h3 class="home-slide__title title title--h3">קרוי וינמ ילטנ</h3>
+
+          <div class="home-slide__btn">
+            {{ mixins.btn(
+              title = 'םיישיא םירופיס דועל',
+              mod = 'btn--light'
+            ) }}
+          </div>
+        </div>
+      </div>
+      {# {% endfor %} #}
+    </div>
+  </div>
+  <!-- end slider -->
+</section>
+<!-- end s-slider -->

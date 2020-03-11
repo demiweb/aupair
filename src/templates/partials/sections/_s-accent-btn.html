@@ -1,0 +1,32 @@
+{%set
+blocks = [
+  { mod: 'block--accent-thrd', title: '?םילבקמ המ' },
+  { mod: 'block--accent-sec', title: '?תופתתשהה יאנת המ' },
+  { mod: '', title: '?תינכותה יבלש המ' }
+]
+%}
+
+<!-- begin s-accent-btn -->
+<section class="s-accent-btn">
+  {% include "partials/_blocks.html" %}
+
+  <!-- begin accent-btn-block -->
+  <div class="s-accent-btn__block accent-btn-block">
+    <h2 class="accent-btn-block__title title title--h2">
+      …ךייחב הבוטה הנשל תונמדזההו המיהדמ היווח ?תאו ,ופתתשה רבכ תונב יפלא
+    </h2>
+
+    <div class="accent-btn-block__text text--400">
+      .תרחבש םוקימב המיאתמה החפשמה תא רתאל ךל םירזועו וננויסינמ םימרות ,ךילהתה יבלש לכב ךתוא םיוולמ ונחנא .יתודידיו טושפ תויהל ךפוה ךילהתה הקירמא ןיא רפוא תרבח םע ?ךבוסמ עמשנ .יעוצקמו חוטב ,יקוח לוכה – תיאקירמא תיתלשממ תינכות הליעפמשו תירבה תוצראב תמקוממה םאה תרבח ונירוחאמו םינש 22 מ הלעמל ךשמב ןוגראה תא םיגציימ ונא
+    </div>
+
+    <div class="accent-btn-block__btn">
+      {{ mixins.btn(
+        title = 'תירבה תוצראל ךרדב תאו ספוטה תא יאלמ',
+        mod = 'btn--light'
+      ) }}
+    </div>
+  </div>
+  <!-- end accent-btn-block -->
+</section>
+<!-- end s-accent-btn -->

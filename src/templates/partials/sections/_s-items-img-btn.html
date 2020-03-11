@@ -1,0 +1,61 @@
+{%set
+items = [
+  {
+    imgMod: '',
+    img: '24.png',
+    text: '.…ב"הראב הדובע תוזיוו אשונב ,ןרא ינד ,ץראב ןוגראה ל"כנמ תא 10 ץורעב ןייארמ ףשר יפר'
+  },
+  {
+    imgMod: '',
+    img: '25.png',
+    text: '.…ב"הראל תויקוח הדובע תוזיוו אשונב רקובה תושדחב ןרא ינד ןוגראה ל"כנמ םע ןויאר'
+  },
+  {
+    imgMod: '',
+    img: '22.png',
+    text: '...םש רבכש הלאכו ב"הראל ךרדב תוירפוא םע תונויאר'
+  },
+  {
+    imgMod: '',
+    img: '21.png',
+    text: ',הנש ךשמל תיקוח הדובע תזיו םיריעצל תועיצמ תוידוהי תוחפשמ 500 סיכ ימדו בכר ,הלכלכ ,םירוגמ ,ב"הראל הסיט סיטרכ'
+  },
+  {
+    imgMod: '',
+    img: '23.png',
+    text: 'תרוכשמ חיוורהל םילארשיל תרשפאמ ב"הראב הדובע .ץראב תורוכשמה לע תוגרד המכב הלועש תירלוד '
+  },
+  {
+    imgMod: 'item-img-btn__img--right-gap',
+    img: '26.png',
+    text: ' .טקיטנוקב ןמרביל רוטנסה תחפשמ לצא תירפוא התייה ןודד ןרק .…ינרדומ יתד ידוהי אוה ןמרביל רוטנסה .תירבה תוצרא אישנ ןגס תויהל דמעומ היה ןמרביל רוטנסה ,ונמזב'
+  }
+]
+%}
+
+<!-- begin s-items-img-btn -->
+<section class="s-items-img-btn">
+  <h2 class="s-items-img-btn__title title title--h1 title--accent-thrd title--shadow">
+    ?היזיולטבו תונותיעב ונילע םירמוא המ
+  </h2>
+
+  <div class="s-items-img-btn__items items-img-btn">
+    {% for i in items %}
+    <div class="items-img-btn__item item-img-btn">
+      <div class="item-img-btn__img{% if i.imgMod %} {{ i.imgMod }}{% endif %}">
+        <img class="js-lazy" alt="" src="" data-src="./img/img-btn/{{ i.img }}"/>
+      </div>
+
+      <div class="item-img-btn__text">{{ i.text | safe }}</div>
+
+      <div class="item-img-btn__btn">
+        {{ mixins.btn(
+          title = '< האלמה הבתכל',
+          mod = 'btn--accent-sec'
+        ) }}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+<!-- end s-items-img-btn -->

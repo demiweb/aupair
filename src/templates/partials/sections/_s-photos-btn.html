@@ -1,0 +1,60 @@
+{%set
+cards = [
+  {
+    mod: 'photo-card--accent-thrd',
+    img: 'image-9.jpg',
+    title: '< ןוטסובמ העונ לש רופיסל'
+  },
+  {
+    mod: '',
+    img: 'image-15.jpg',
+    title: '< קרוי וינב רמוע לש רופיסל'
+  },
+  {
+    mod: 'photo-card--accent-sec',
+    img: 'image-16.jpg',
+    title: '< ןטהנממ ריש לש רופיסל'
+  },
+  {
+    mod: 'photo-card--accent-sec',
+    img: 'image-17.jpg',
+    title: '< סל‘גנא סולמ תנע לש רופיסל'
+  },
+  {
+    mod: 'photo-card--accent-thrd',
+    img: 'image-18.jpg',
+    title: '< ןוטגנישוומ הניא לש רופיסל'
+  },
+  {
+    mod: '',
+    img: 'image-19.jpg',
+    title: '< טקיטנוקמ תימי לש רופיסל'
+  }
+]
+%}
+
+<!-- begin s-photos-cards -->
+<section class="s-photos-cards">
+  <!-- begin photos-cards -->
+  <div class="photos-cards">
+    {% for i in cards %}
+    <div class="photos-cards__item">
+      <a href="#" class="photo-card{% if i.mod %} {{ i.mod }}{% endif %}">
+        <span class="photo-card__img js-lazy" data-background-image="./img/cards/{{ i.img }}"></span>
+
+        <span class="photo-card__title">{{ i.title | safe }}</span>
+      </a>
+    </div>
+    {% endfor %}
+  </div>
+  <!-- end photos-cards -->
+
+  <div class="section-btn">
+    {{ mixins.btn(
+      title = '...םירופיס דועל',
+      mod = 'btn--accent-sec',
+      href = false
+    ) }}
+  </div>
+</section>
+<!-- end s-photos-cards -->

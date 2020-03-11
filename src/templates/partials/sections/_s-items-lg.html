@@ -1,15 +1,57 @@
-<!-- begin s-items-lg -->
-<section class="s-items-lg">
+{%set
+cards = [
+  {
+    mod: 'card--accent-thrd',
+    title: '…הקירמא ןיא רפוא',
+    text: '…תחכשנ יתלב היווח וז ,ב"הראב הדובע דוע אל וז .תיקוחה ךרדה איהו תירבה תוצראב דובעל תחא ךרד קר שי ב"הראב תיקוח הדובע ךל העיצמ הקירמא ןיא רפוא ןוגראה תינכותב ופתתשה רבכ תונב יפלא !תחכשנ יתלבו תידוחיי היווחו',
+    img: 'court-cook-6j79Y9G3Dfo-unsplash 1.jpg',
+    btn: { title: '', mod: 'btn--accent-thrd' }
+  },
+  {
+    mod: 'card--accent-sec',
+    title: 'ךילהתהו תינכותה',
+    text: '!םייחה לכל תחכשנ יתלב היווח :הרטמה הוויל הקירמא ןיא רפוא ,תונורחאה םינשה 22 ךלהמב .תירבה תוצראב רפוא תויהל ןכרדב לארשימ תונב יפלא ,יקוח ןפואב תינכותב ףתתשהלו ךייחב ייוניש תושעל הלוכי תא תולבגומ יתלבה תויורשפאה ץראב תויחלו דומלל .םימוחתה לכב ךמצע תא גרדשלו',
+    img: 'jonathan-borba-0cR4vsib0uY-unsplash 1.jpg',
+    btn: { title: '', mod: 'btn--accent-sec' }
+  },
+  {
+    mod: '',
+    title: '?רפוא הז המ',
+    text: ',החפשמב הוושכ תלבקתמ רמולכ ,הווש - au pair הלימה שוריפ המיע תקלוחו תחראמה החפשמהמ קלחל תכפוה רפוא חווט יכורא םיסחיל ליבומ תובורק םיתיעלש ,יתוברת ןויסינ .הדובעה תפוקתל רבעמ תיאקירמאה תוברתה תא ריכהל תוריעצל תורשפא תאז .תילארשיה ,ךלש תוברתה לע דמללו',
+    img: 'pabbathi-prashanth-fSsNuMtYg00-unsplash 1.jpg',
+    btn: { title: '', mod: '' }
+  }
+]
+%}
+
+<!-- begin s-cards-lg -->
+<section class="s-cards-lg">
   <!-- begin cards -->
   <div class="cards">
-    {% for i in items %}
+    {% for i in cards %}
     <!-- begin card -->
-    <div class="card">
-      
+    <div class="cards__item card {{ i.mod }}">
+      <div class="card__inner">
+        <h2 class="card__title title title--h2">{{ i.title | safe }}</h2>
+
+        <div class="card__text">{{ i.text | safe }}</div>
+
+        <div
+          class="card__img js-lazy"
+          data-background-image="./img/cards/{{ i.img }}"
+        ></div>
+
+        <div class="card__btn">
+          {{ mixins.btn(
+            title = i.btn.title or 'דוע יארק',
+            mod = i.btn.mod
+          ) }}
+        </div>
+      </div>
     </div>
     <!-- end card -->
     {% endfor %}
   </div>
   <!-- end cards -->
 </section>
-<!-- end s-items-lg -->
+<!-- end s-cards-lg -->

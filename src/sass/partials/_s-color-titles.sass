@@ -1,0 +1,32 @@
+.s-color-titles
+  display: flex
+  padding-top: rem(81)
+  padding-bottom: rem(96)
+  padding-left: rem(72)
+
+
+  &__img
+    width: percentage(360 / 1440)
+    position: relative
+    padding: 15px
+    +before
+      position: absolute
+      z-index: 0
+      top: 0
+      right: 0
+      bottom: 0
+      left: rem(82)
+      background-color: $accent-thrd
+    img
+      width: 100%
+      position: relative
+      z-index: 1
+
+  &__content
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+
+    width: percentage((1440 - 360) / 1440)
+    padding-right: rem(40)
+
