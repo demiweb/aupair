@@ -52,4 +52,192 @@ body
 .section-btn
   color: $white
   text-align: center
+
+.title-label
+  display: inline-block
+
+  min-width: rem(408)
+  padding: rem(20) rem(73) rem(15)
+  margin-bottom: rem(30)
+
+  background-color: $accent
+  color: $white
+
+  &--accent-sec
+    background-color: $accent-sec
+
+  &--accent-thrd
+    background-color: $accent-thrd
+    color: $c-text
     
+
+.text-photos
+  padding-left: rem(25)
+  padding-right: rem(25)
+  &__block
+    margin-bottom: rem(75)
+    &:nth-child(1)
+      padding-right: rem(70)
+    &:nth-child(2)
+      padding-left: rem(80)
+
+.text-photos-block
+  $this: &
+
+  display: flex
+  flex-wrap: wrap
+
+  margin-left: rem(-25)
+  margin-right: rem(-25)
+
+  &__text
+    width: percentage(871 / 1352)
+    padding-left: rem(25)
+    padding-right: rem(25)
+  &__img
+    width: percentage((1352 - 871) / 1352)
+    padding-left: rem(25)
+    padding-right: rem(25)
+
+  &--right
+    margin-right: rem(-50)
+
+  &--sm
+    #{$this}__img
+      width: 50%
+    #{$this}__text
+      width: 50%
+
+
+.text-img
+  position: relative
+  display: inline-block
+  font-size: 0
+  +before
+    position: absolute
+    z-index: 0
+
+  img
+    position: relative
+    z-index: 1
+    width: 100%
+
+  &--sm
+    padding-left: rem(45)
+    padding-right: rem(45)
+    +before
+      top: rem(5)
+      bottom: rem(5)
+      left: 0
+      right: 0
+
+  &--md
+    padding-right: rem(24)
+    padding-top: rem(21)
+    padding-bottom: rem(21)
+    +before
+      top: 0
+      bottom: 0
+      right: 0
+      left: rem(100)
+
+  &--md-side
+    padding: 0 rem(25)
+    +before
+      left: 0
+      right: 0
+      top: rem(25)
+      bottom: rem(25)
+
+  &--accent-sec
+    +before
+      background-color: $accent-sec
+
+  &--accent
+    +before
+      background-color: $accent
+
+
+.right-images-block
+  +clr
+
+  &__subttl
+    margin-bottom: rem(20)
+
+  &__imgs
+    float: left
+    margin-right: rem(40)
+    width: 30%
+    padding-top: 60%
+
+  &__block
+    margin-bottom: rem(39)
+
+  &__content
+    padding-right: rem(48)
+    padding-left: rem(20)
+
+.right-images
+  position: relative
+  &__img
+    position: absolute
+    display: inline-block
+    z-index: 1
+    +before
+      position: absolute
+      z-index: 0
+    img
+      position: relative
+      z-index: 1
+      width: 100%
+
+    &:nth-child(1)
+      top: 0
+      left: 0
+      z-index: 0
+
+      padding: rem(30)
+      padding-right: 0
+      +before
+        background-color: $accent-thrd
+        top: 0
+        bottom: 0
+        left: 0
+        right: rem(30)
+    &:nth-child(2)
+      top: 35%
+      right: 0
+      z-index: 1
+
+      padding: rem(19) rem(18)
+      padding-bottom: 0
+      +before
+        background-color: $accent-sec
+        top: 0
+        left: 0
+        right: 0
+        bottom: rem(100)
+    &:nth-child(3)
+      bottom: 0
+      left: 0
+      z-index: 0
+
+      padding: rem(30)
+      padding-left: 0
+      +before
+        background-color: $accent
+        top: 0
+        bottom: 0
+        right: 0
+        left: 0
+    &:nth-child(4)
+      bottom: 5%
+      right: 10%
+
+      padding: 0 rem(16) rem(9) 0
+      +before
+        background-color: $accent-thrd
+        bottom: 0
+        right: 0
+        top: rem(15)
+        left: rem(24)

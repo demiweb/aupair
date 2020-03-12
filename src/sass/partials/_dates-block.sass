@@ -1,0 +1,59 @@
+.dates-block
+  display: flex
+  flex-wrap: wrap
+
+  &__img
+    width: rem(376)
+
+  &__content
+    // width: percentage((1440 - 376) / 1440)
+    width: calc(100% - #{rem(376)})
+    padding: 0 rem(30) 0 rem(80)
+
+  &__text
+    margin-bottom: rem(47)
+
+.dates-block-img
+  display: inline-block
+  font-size: 0
+  position: relative
+  padding: 0 rem(22) rem(35)
+
+  img
+    position: relative
+    z-index: 1
+    width: 100%
+
+  +before
+    position: absolute
+    z-index: 0
+    background-color: $accent-thrd
+    bottom: 0
+    left: 0
+    right: 0
+    top: rem(130)
+
+.dates-block-list
+  display: flex
+  &__title
+    width: 20%
+  &__list
+    width: 80%
+
+.dates-list
+  font-size: em(18)
+  font-weight: 400
+
+  display: flex
+  flex-wrap: wrap
+
+  &__item
+    display: flex
+    align-items: center
+
+    margin-bottom: rem(5)
+
+    width: 50%
+
+  &__icon
+    margin-left: .5rem

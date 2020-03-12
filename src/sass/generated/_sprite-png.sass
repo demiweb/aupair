@@ -1,5 +1,7 @@
 $icons: (0:0)
-$icons: map-merge($icons,('peace': (X: 0px, Y:0px, W: 28px, H: 28px, TW: 28px, TH: 28px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('check': (X: 0px, Y:-49px, W: 26px, H: 26px, TW: 77px, TH: 75px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('peace': (X: -49px, Y:0px, W: 28px, H: 28px, TW: 77px, TH: 75px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('plane': (X: 0px, Y:0px, W: 39px, H: 39px, TW: 77px, TH: 75px, IMG: '../img/sprite.png')))
 
 
 // Gets an attribute from the sass map
@@ -36,9 +38,21 @@ $icons: map-merge($icons,('peace': (X: 0px, Y:0px, W: 28px, H: 28px, TW: 28px, T
   +sprite-retina($i)  
 
 //
+//.icon-check
+//  width: 26px
+//  height: 26px
+//  background-image: url('../img/sprite.png')
+//  background-position: 0px -49px
+//
 //.icon-peace
 //  width: 28px
 //  height: 28px
+//  background-image: url('../img/sprite.png')
+//  background-position: -49px 0px
+//
+//.icon-plane
+//  width: 39px
+//  height: 39px
 //  background-image: url('../img/sprite.png')
 //  background-position: 0px 0px
 //

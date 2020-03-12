@@ -1,0 +1,128 @@
+.s-label-aupair
+  padding-top: rem(44)
+  padding-bottom: rem(30)
+
+  &__prices
+    margin-bottom: rem(55)
+
+  &__title-sm
+    margin-bottom: rem(25)
+
+.s-label-text-images
+  padding-top: rem(40)
+  padding-bottom: rem(75)
+
+  &__block-sm
+    max-width: 1090px
+    margin: 0 auto
+    align-items: center
+    margin-bottom: rem(45)
+
+.s-label-dates
+  padding-top: rem(75)
+  padding-bottom: rem(30)
+
+.s-label-blocks
+  padding-top: rem(30)
+  padding-bottom: rem(35)
+
+.s-label-list
+  padding-top: rem(35)
+  padding-bottom: rem(25)
+
+  &__block
+    display: flex
+    align-items: center
+    flex-wrap: wrap
+    margin-bottom: rem(54)
+
+  &__img-wrap
+    width: rem(316)
+
+  &__content
+    width: calc(100% - #{rem(316)})
+    padding: 0 rem(63)
+
+  &__img
+    position: relative
+    padding: rem(30) rem(80)
+    padding-left: 0
+    +before
+      background-color: $accent
+      position: absolute
+      z-index: 0
+      top: 0
+      right: 0
+      bottom: 0
+      left: rem(80)
+    img
+      position: relative
+      z-index: 1
+      width: 100%
+
+  &__list-blocks
+    display: flex
+    flex-wrap: wrap
+
+    max-width: 1110px
+    margin: 0 auto
+
+    margin-bottom: rem(109)
+
+  &__list-block
+    width: 50%
+    padding-left: rem(15)
+
+  &__block-title
+    margin-bottom: rem(40)
+
+.s-label-text
+  padding-top: rem(30)
+  padding-bottom: rem(45)
+
+  &__text
+    max-width: 1110px
+    margin: 0 auto
+
+
+.s-label-img-blocks
+  padding-top: rem(45)
+  padding-bottom: rem(107)
+
+  &__block
+    display: flex
+    flex-wrap: wrap
+
+    margin-bottom: rem(78)
+
+  &__img-wrap
+    width: rem(550)
+
+  &__text
+    width: calc(100% - #{rem(550)})
+    padding-left: rem(64)
+    padding-right: rem(65)
+    padding-top: rem(80)
+
+  &__text-in
+    max-width: rem(616)
+
+  &__img
+    position: relative
+    font-size: 0
+
+    padding: 0 0 rem(21) rem(16)
+    +before
+      position: absolute
+      z-index: 0
+      background-color: $accent-thrd
+
+      top: rem(96)
+      bottom: 0
+      left: 0
+      right: 0
+
+    img
+      position: relative
+      z-index: 1
+      width: 100%

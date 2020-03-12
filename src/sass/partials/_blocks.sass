@@ -5,6 +5,10 @@
   margin-left: rem(-12)
   margin-right: rem(-12)
 
+  &__wrap
+    padding-left: rem(24)
+    padding-right: rem(24)
+
   &__item
     width: 33.33333%
     padding-left: rem(12)
@@ -19,15 +23,21 @@
 
   height: 100%
   color: $white
-  min-height: rem(164)
-  padding: rem(32)
+  // min-height: rem(164)
+  padding: rem(32) rem(50) rem(14)
   text-align: center
   background-color: $accent
   position: relative
 
   +after
-    +arr(2em, 1em, currentColor, b)
+    +arr(2.5em, 1em, currentColor, b)
     // position: absolute
+
+  &__title
+    margin-bottom: rem(15)
+    flex-grow: 1
+    display: flex
+    align-items: center
 
   &--accent-sec
     background-color: $accent-sec
