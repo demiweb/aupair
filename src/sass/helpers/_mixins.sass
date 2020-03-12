@@ -225,4 +225,9 @@
     &:before
       content: counter(list + $var) $sep
       counter-increment: list + $var
+
+=not-rtl
+  html:not([dir="rtl"]) &
+    @content
+
       

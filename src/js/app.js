@@ -12,6 +12,7 @@ import classNames from './classNames'
 // import sayHello from './lib/sayHello'
 import setHTMLClassNames from './methods/setHTMLClassNames'
 import setLazy from './methods/setLazy'
+import setSliders from './methods/setSliders'
 
 // import Menu from './components/Menu/Menu'
 
@@ -48,6 +49,7 @@ class App {
       // sayHello,
       setHTMLClassNames,
       setLazy,
+      setSliders,
     }
 
     Object.values(this.methods).forEach(fn => fn(this))

@@ -1,0 +1,38 @@
+.s-form
+  display: flex
+  flex-wrap: wrap
+
+  padding-top: rem(45)
+  padding-bottom: rem(103)
+
+  &__img-wrap
+    width: rem(575)
+    padding-top: rem(17)
+
+  &__form-wrap
+    width: calc(100% - #{rem(575)})
+    padding-left: rem(15)
+    padding-right: rem(15)
+
+  &__form
+    max-width: rem(438)
+    margin: 0 auto
+
+  &__img
+    position: relative
+    font-size: 0
+
+    padding: 0 0 rem(39) rem(70)
+    +before
+      position: absolute
+      z-index: 0
+      top: rem(32)
+      right: rem(95)
+      bottom: 0
+      left: 0
+
+      background-color: $accent
+    img
+      position: relative
+      z-index: 1
+      width: 100%

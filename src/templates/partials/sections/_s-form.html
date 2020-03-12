@@ -1,0 +1,67 @@
+{%set
+fields = [
+  {
+    name: 'input',
+    type: 'text',
+    placeholder: 'אלמ םש'
+  },
+  {
+    name: 'input',
+    type: 'text',
+    placeholder: 'ליימ'
+  },
+  {
+    name: 'input',
+    type: 'text',
+    placeholder: 'דיינ'
+  },
+  {
+    name: 'input',
+    type: 'text',
+    placeholder: 'קובסייפב םש'
+  },
+  {
+    name: 'textarea',
+    type: '',
+    placeholder: 'תורעה'
+  }
+]
+%}
+
+<!-- begin s-form -->
+<section class="s-form">
+  <div class="s-form__form-wrap">
+    <form class="s-form__form form">
+      
+      {% for i in fields %}
+        <div class="form__field">
+          {{ mixins.input(
+            name = i.name,
+            mod = '',
+            type = i.type,
+            placeholder = i.placeholder,
+            value = '',
+            fieldClass = ''
+          ) }}
+        </div>
+      {% endfor %}
+
+
+      <div class="form__field form__btn">
+        {{ mixins.btn(
+          title = 'יחלש',
+          mod = '',
+          href = false
+        ) }}
+      </div>
+    </form>
+  </div>
+
+  <div class="s-form__img-wrap">
+    <div class="s-form__img">
+      <img class="js-lazy" alt="" src="" data-src="./img/michal-mokrzycki-ftZTr236vcA-unsplash.jpg"/>
+    </div>
+  </div>
+
+</section>
+<!-- end s-form -->

@@ -1,9 +1,9 @@
 <!-- begin s-slider -->
 <section class="s-slider">
   <!-- begin slider -->
-  <div class="slider__wrap">
-    <div class="slider js-slider" data-slider="home">
-      {# {% for i in range(0, 4) %} #}
+  <div class="slider__wrap slider--home__wrap">
+    <div class="slider slider--home js-slider" data-slider="home">
+       {% for i in range(0, 4) %} 
       <div class="slide home-slide">
         <div class="home-slide__img">
           <img class="js-lazy" alt="" src="" data-src="./img/image-8.png"/>
@@ -26,7 +26,7 @@
           </div>
         </div>
       </div>
-      {# {% endfor %} #}
+      {% endfor %} 
     </div>
   </div>
   <!-- end slider -->

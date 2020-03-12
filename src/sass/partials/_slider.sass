@@ -1,3 +1,37 @@
+.slider
+  &__wrap
+    direction: ltr
+    position: relative
+    overflow: hidden
+  
+  &--home
+    &__wrap
+      [data-action="stop"], [data-action="start"]
+        display: none
+      .tns-ovh
+        padding-top: rem(60)
+        padding-bottom: rem(70)
+      .tns-nav
+        position: absolute
+        bottom: 0
+        left: 0
+        right: 0
+        text-align: center
+        button
+          display: inline-block
+
+          width: rem(20)
+          height: rem(20)
+
+          margin-left: rem(7)
+          margin-right: rem(7)
+
+          border-radius: 50%
+          background-color: #e2e2e2
+
+          &.tns-nav-active
+            background-color: $accent
+  
 .home-slide
   padding-left: rem(110)
   padding-right: rem(110)
@@ -7,7 +41,12 @@
   background-color: $accent
   color: $white
 
-  display: flex
+  display: inline-flex !important
+
+  direction: rtl
+  font-size: 1rem !important
+  +not-rtl
+    direction: ltr
 
   &__title
     margin-bottom: rem(50)
