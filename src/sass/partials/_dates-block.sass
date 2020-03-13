@@ -4,11 +4,26 @@
 
   &__img
     width: rem(376)
+    max-width: 30%
+
+    +xs
+      max-width: none
+      width: 100%
+      margin-bottom: rem(15)
+      text-align: center
 
   &__content
-    // width: percentage((1440 - 376) / 1440)
-    width: calc(100% - #{rem(376)})
+    width: 100%
+    max-width: 70%
+    // max-width: calc(100% - #{rem(376)})
     padding: 0 rem(30) 0 rem(80)
+
+    +lg
+      padding: 0 rem(30)
+    +md
+      padding: 0 rem(15)
+    +xs
+      max-width: none   
 
   &__text
     margin-bottom: rem(47)
@@ -17,7 +32,7 @@
   display: inline-block
   font-size: 0
   position: relative
-  padding: 0 rem(22) rem(35)
+  padding: 0 5% 7%
 
   img
     position: relative
@@ -31,14 +46,26 @@
     bottom: 0
     left: 0
     right: 0
-    top: rem(130)
+    top: 35%
 
 .dates-block-list
   display: flex
+  flex-wrap: wrap
+
   &__title
-    width: 30%
+    width: 20%
+    +xl
+      width: 30%
+    +lg
+      width: 100%
+      margin-bottom: rem(15)
+
   &__list
-    width: 70%
+    width: 80%
+    +xl
+      width: 70%
+    +lg
+      width: 100%
 
 .dates-list
   font-size: em(18)
@@ -54,6 +81,9 @@
     margin-bottom: rem(5)
 
     width: 50%
+
+    +xxs
+      width: 100%
 
   &__icon
     margin-left: .5rem

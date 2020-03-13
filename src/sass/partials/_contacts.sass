@@ -22,6 +22,17 @@
 
   background-color: $accent
 
+  +lg
+    width: rem(280)
+    height: rem(280)
+    padding: rem(30) rem(40)
+
+  +md
+    width: rem(200)
+    height: rem(200)
+    padding: rem(25)
+    font-size: 1em
+
   &__icon
     margin-bottom: rem
     position: relative
@@ -29,11 +40,15 @@
     display: flex
     .icon
       font-size: rem(80)
+      +md
+        font-size: rem(40)
     img
       width: rem(86)
+      +md
+        width: rem(50)
 
   &--accent-thrd
-    background-color: $accent-thrd
+    @extend .bg-accent-thrd
 
   &--accent-sec
-    background-color: $accent-sec
+    @extend .bg-accent-sec

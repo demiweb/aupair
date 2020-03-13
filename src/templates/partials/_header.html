@@ -26,7 +26,8 @@
 
       {{ mixins.list(
         name = 'nav',
-        modifications = { wrap: '', item: '', link: '' },
+        hasWrap = true,
+        modifications = { wrap: 'header__nav js-menu', item: '', link: '' },
         list = [
           { link: 'רשק תריצי ', modItem: 'nav__current-item' },
           { link: 'ףסונ עדימ ' },
@@ -36,6 +37,8 @@
           { link: 'English' }
         ]
       ) }}
+
+      <button class="header__burger burger js-burger"><span></span></button>
     </div>
   </div>
 </header>

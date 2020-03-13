@@ -1,13 +1,40 @@
 .header
   position: relative
   z-index: 10
-  overflow: hidden
+
+  +md
+    position: fixed
+    left: 0
+    right: 0
+    top: 0
+    box-shadow: 0 0 10px rgba($black, .15)
 
   &__top
     background-color: $accent
     position: relative
     z-index: 1
     color: $white
+    overflow: hidden
+
+    +before
+      position: absolute
+      z-index: 0
+      top: calc(100% - #{rem(40)})
+      left: 50%
+      transform: translate(-50%, 0)
+
+      width: rem(250)
+      height: rem(250)
+
+      background-color: $white
+      border-radius: 50%
+
+      +md
+        width: rem(150)
+        height: rem(80)
+        top: calc(100% - #{rem(25)})
+      +sm
+        display: none
 
   &__top-in
     display: flex
@@ -17,23 +44,15 @@
 
     height: $header-top-height
 
+    +lg
+      padding: rem(10) rem(15)
+    +md
+      height: $header-top-height-md
+
   &__bottom
     background-color: $white
     position: relative
     z-index: 2
-
-    +before
-      position: absolute
-      z-index: 0
-      top: rem(-40)
-      left: 50%
-      transform: translate(-50%, 0)
-
-      width: rem(250)
-      height: rem(250)
-
-      background-color: $white
-      border-radius: 50%
 
 
   &__bottom-in
@@ -46,14 +65,37 @@
     padding: rem(10) rem(35) 0
     height: $header-bottom-height
 
+    +md
+      height: $header-bottom-height-md
+      align-items: center
+      flex-direction: row
+
+      padding-left: rem(15)
+      padding-right: rem(15)
+      padding-top: 0
+
   &__logo
     display: block
+    position: relative
+    z-index: 10
+
     margin-left: auto
     margin-right: auto
     width: rem(163)
 
     margin-top: rem(-30)
     margin-bottom: rem(10)
+
+    img
+      position: relative
+
+    +md
+      width: rem(100)
+      margin-bottom: 0
+
+    +sm
+      margin-top: 0
+      width: rem(70)
 
   &__contacts
     display: flex
@@ -63,12 +105,24 @@
     flex-grow: 1
     font-size: em(18)
 
+    +xs
+      font-size: em(16)
+    +xxs
+      font-size: em(14)
+
   &__contact
     +notlast
       margin-left: rem(60)
+
       +not-rtl
         margin-left: 0
         margin-right: rem(60)
+
+      +md
+        margin-left: rem(10)
+        +not-rtl
+          margin-left: 0
+          margin-right: rem(10)
     a
       display: inline-flex
       align-items: center
@@ -78,3 +132,61 @@
         +not-rtl
           margin-right: 0
           margin-left: .5em
+
+  &__nav
+    +md
+      position: absolute
+      top: 100%
+      left: 0
+      right: 0
+      background-color: $white
+
+      max-height: 0
+      overflow: hidden
+
+      +ready
+        +tr(max-height .5s)
+
+  &__burger
+    position: absolute !important
+    z-index: 10
+    top: 50%
+    transform: translate(0, -50%)
+    left: rem(15)
+
+    +not-rtl
+      left: auto
+      right: rem(15)
+
+    +mdmin
+      display: none
+
+.burger 
+  display: block
+  width: rem(28)
+  height: rem(28)
+  position: relative
+  span
+    display: block
+    &, &::after, &::before
+      width: 100%
+      height: 2px
+      background-color: currentColor
+      backface-visibility: hidden
+      border-radius: 2px
+      +tr(transform .3s)
+    &::after, &::before
+      content: ""
+      position: absolute
+      left: 0
+    &::after
+      top: 5px
+    &::before
+      bottom: 5px
+  // &--active 
+  //   span
+  //     background-color: transparent
+  //     &::before
+  //       transform: rotate(45deg) translate(-7px,-5px)
+  //     &::after
+  //       transform: rotate(-45deg) translate(-6px,4px)

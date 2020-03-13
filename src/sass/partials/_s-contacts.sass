@@ -4,8 +4,20 @@
   padding-bottom: rem(130)
   overflow: hidden
 
+  +lg
+    padding-top: rem(100)
+    padding-bottom: rem(100)
+
+  +md
+    padding-top: rem(50)
+    padding-bottom: rem(50)
+
   &__inner
     display: flex
+    flex-wrap: wrap
 
   &__item
     width: 33.33333%
+    margin-bottom: rem(25)
+    +xs
+      width: 100%

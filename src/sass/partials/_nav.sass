@@ -7,6 +7,13 @@
     margin-left: rem(20)
     margin-right: rem(20)
 
+    +md
+      display: block
+      margin-left: 0
+      margin-right: 0
+      +notlast
+        margin-bottom: rem(10)
+
   a
     display: inline-block
     position: relative
@@ -24,6 +31,9 @@
       
       +tr(opacity .3s, visibility .3s)
       +hidden
+
+      +md
+        height: rem(7)
 
     +tr(color .3s)
     +hover

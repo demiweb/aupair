@@ -43,15 +43,18 @@
               <img class="js-lazy" alt="" src="" data-src="./img/logo.png" />
             </a>
             <!-- begin nav -->
-            <ul class="nav">
-              <li class=" nav__current-item"><a href="#">רשק תריצי </a></li>
-              <li><a href="#">ףסונ עדימ </a></li>
-              <li><a href="#">תוצלמה ך</a></li>
-              <li><a href="#">ילהתה ה</a></li>
-              <li><a href="#">קירמאב רפוא </a></li>
-              <li><a href="#">English</a></li>
-            </ul>
+            <nav class="nav header__nav js-menu">
+              <ul>
+                <li class=" nav__current-item"><a href="#">רשק תריצי </a></li>
+                <li><a href="#">ףסונ עדימ </a></li>
+                <li><a href="#">תוצלמה ך</a></li>
+                <li><a href="#">ילהתה ה</a></li>
+                <li><a href="#">קירמאב רפוא </a></li>
+                <li><a href="#">English</a></li>
+              </ul>
+            </nav>
             <!-- end nav-->
+            <button class="header__burger burger js-burger"><span></span></button>
           </div>
         </div>
       </header>
@@ -78,19 +81,118 @@
           <!-- begin blocks -->
           <div class="blocks">
             <div class="blocks__item">
-              <a href="#" class="block block--accent-thrd">
-                <span class="block__title title title--h2">?םילבקמ המ</span>
-              </a>
+              <div class="block block--accent-thrd">
+                <button class="block__btn js-dropdown-btn">
+                  <span class="block__title title title--h2">?םילבקמ המ</span>
+                </button>
+                <div class="block__list-wrap js-dropdown-item">
+                  <div class="block__list-title">תחלצומה תינכותב ליעפ קלח תחקל תוצור תובר תונב :םימדקומ םיאנת המכ םנשי ךא הקירמא ןיא רפוא לש</div>
+                  <!-- begin block__list -->
+                  <ul class="block__list">
+                    <li class="block__list-item ">
+                      <svg width="1.000em" height="1em" viewBox="0 0 13 13" class="block__list-icon icon icon--check">
+                        <path d="M1.12 7.122L.272 8.139a.5.5 0 00.006.647l3.236 3.734a.5.5 0 00.785-.037L12.89.458a.225.225 0 00-.35-.283L4.324 9.24a.5.5 0 01-.76-.023l-1.67-2.087a.5.5 0 00-.774-.007z" />
+                      </svg> (ללוכ אל) 27 דע 18 םיאליג חווטב םישנ – ליג</li>
+                    <li class="block__list-item ">
+                      <svg width="1.000em" height="1em" viewBox="0 0 13 13" class="block__list-icon icon icon--check">
+                        <path d="M1.12 7.122L.272 8.139a.5.5 0 00.006.647l3.236 3.734a.5.5 0 00.785-.037L12.89.458a.225.225 0 00-.35-.283L4.324 9.24a.5.5 0 01-.76-.023l-1.67-2.087a.5.5 0 00-.774-.007z" />
+                      </svg> הגיהנ ןוישיר תולעב</li>
+                    <li class="block__list-item ">
+                      <svg width="1.000em" height="1em" viewBox="0 0 13 13" class="block__list-icon icon icon--check">
+                        <path d="M1.12 7.122L.272 8.139a.5.5 0 00.006.647l3.236 3.734a.5.5 0 00.785-.037L12.89.458a.225.225 0 00-.35-.283L4.324 9.24a.5.5 0 01-.76-.023l-1.67-2.087a.5.5 0 00-.774-.007z" />
+                      </svg> (רטסיביב ללוכ) םידלי םע הדובע ןויסינ</li>
+                    <li class="block__list-item ">
+                      <svg width="1.000em" height="1em" viewBox="0 0 13 13" class="block__list-icon icon icon--check">
+                        <path d="M1.12 7.122L.272 8.139a.5.5 0 00.006.647l3.236 3.734a.5.5 0 00.785-.037L12.89.458a.225.225 0 00-.35-.283L4.324 9.24a.5.5 0 01-.76-.023l-1.67-2.087a.5.5 0 00-.774-.007z" />
+                      </svg> תוחפל דומיל תונש 12</li>
+                    <li class="block__list-item ">
+                      <svg width="1.000em" height="1em" viewBox="0 0 13 13" class="block__list-icon icon icon--check">
+                        <path d="M1.12 7.122L.272 8.139a.5.5 0 00.006.647l3.236 3.734a.5.5 0 00.785-.037L12.89.458a.225.225 0 00-.35-.283L4.324 9.24a.5.5 0 01-.76-.023l-1.67-2.087a.5.5 0 00-.774-.007z" />
+                      </svg> הריבס המרב תילגנא</li>
+                    <li class="block__list-item ">
+                      <svg width="1.000em" height="1em" viewBox="0 0 13 13" class="block__list-icon icon icon--check">
+                        <path d="M1.12 7.122L.272 8.139a.5.5 0 00.006.647l3.236 3.734a.5.5 0 00.785-.037L12.89.458a.225.225 0 00-.35-.283L4.324 9.24a.5.5 0 01-.76-.023l-1.67-2.087a.5.5 0 00-.774-.007z" />
+                      </svg> הניקת תואירב</li>
+                  </ul>
+                  <!-- end block__list-->
+                </div>
+              </div>
             </div>
             <div class="blocks__item">
-              <a href="#" class="block block--accent-sec">
-                <span class="block__title title title--h2">?תופתתשהה יאנת המ</span>
-              </a>
+              <div class="block block--accent-sec">
+                <button class="block__btn js-dropdown-btn">
+                  <span class="block__title title title--h2">?תופתתשהה יאנת המ</span>
+                </button>
+                <div class="block__list-wrap js-dropdown-item">
+                  <div class="block__list-title">תחלצומה תינכותב ליעפ קלח תחקל תוצור תובר תונב :םימדקומ םיאנת המכ םנשי ךא הקירמא ןיא רפוא לש</div>
+                  <!-- begin block__list -->
+                  <ul class="block__list">
+                    <li class="block__list-item ">
+                      <svg width="1.000em" height="1em" viewBox="0 0 13 13" class="block__list-icon icon icon--check">
+                        <path d="M1.12 7.122L.272 8.139a.5.5 0 00.006.647l3.236 3.734a.5.5 0 00.785-.037L12.89.458a.225.225 0 00-.35-.283L4.324 9.24a.5.5 0 01-.76-.023l-1.67-2.087a.5.5 0 00-.774-.007z" />
+                      </svg> (ללוכ אל) 27 דע 18 םיאליג חווטב םישנ – ליג</li>
+                    <li class="block__list-item ">
+                      <svg width="1.000em" height="1em" viewBox="0 0 13 13" class="block__list-icon icon icon--check">
+                        <path d="M1.12 7.122L.272 8.139a.5.5 0 00.006.647l3.236 3.734a.5.5 0 00.785-.037L12.89.458a.225.225 0 00-.35-.283L4.324 9.24a.5.5 0 01-.76-.023l-1.67-2.087a.5.5 0 00-.774-.007z" />
+                      </svg> הגיהנ ןוישיר תולעב</li>
+                    <li class="block__list-item ">
+                      <svg width="1.000em" height="1em" viewBox="0 0 13 13" class="block__list-icon icon icon--check">
+                        <path d="M1.12 7.122L.272 8.139a.5.5 0 00.006.647l3.236 3.734a.5.5 0 00.785-.037L12.89.458a.225.225 0 00-.35-.283L4.324 9.24a.5.5 0 01-.76-.023l-1.67-2.087a.5.5 0 00-.774-.007z" />
+                      </svg> (רטסיביב ללוכ) םידלי םע הדובע ןויסינ</li>
+                    <li class="block__list-item ">
+                      <svg width="1.000em" height="1em" viewBox="0 0 13 13" class="block__list-icon icon icon--check">
+                        <path d="M1.12 7.122L.272 8.139a.5.5 0 00.006.647l3.236 3.734a.5.5 0 00.785-.037L12.89.458a.225.225 0 00-.35-.283L4.324 9.24a.5.5 0 01-.76-.023l-1.67-2.087a.5.5 0 00-.774-.007z" />
+                      </svg> תוחפל דומיל תונש 12</li>
+                    <li class="block__list-item ">
+                      <svg width="1.000em" height="1em" viewBox="0 0 13 13" class="block__list-icon icon icon--check">
+                        <path d="M1.12 7.122L.272 8.139a.5.5 0 00.006.647l3.236 3.734a.5.5 0 00.785-.037L12.89.458a.225.225 0 00-.35-.283L4.324 9.24a.5.5 0 01-.76-.023l-1.67-2.087a.5.5 0 00-.774-.007z" />
+                      </svg> הריבס המרב תילגנא</li>
+                    <li class="block__list-item ">
+                      <svg width="1.000em" height="1em" viewBox="0 0 13 13" class="block__list-icon icon icon--check">
+                        <path d="M1.12 7.122L.272 8.139a.5.5 0 00.006.647l3.236 3.734a.5.5 0 00.785-.037L12.89.458a.225.225 0 00-.35-.283L4.324 9.24a.5.5 0 01-.76-.023l-1.67-2.087a.5.5 0 00-.774-.007z" />
+                      </svg> הניקת תואירב</li>
+                  </ul>
+                  <!-- end block__list-->
+                </div>
+              </div>
             </div>
             <div class="blocks__item">
-              <a href="#" class="block">
-                <span class="block__title title title--h2">?תינכותה יבלש המ</span>
-              </a>
+              <div class="block">
+                <button class="block__btn js-dropdown-btn">
+                  <span class="block__title title title--h2">?תינכותה יבלש המ</span>
+                </button>
+                <div class="block__list-wrap js-dropdown-item">
+                  <div class="block__list-title">תחלצומה תינכותב ליעפ קלח תחקל תוצור תובר תונב :םימדקומ םיאנת המכ םנשי ךא הקירמא ןיא רפוא לש</div>
+                  <!-- begin block__list -->
+                  <ul class="block__list">
+                    <li class="block__list-item ">
+                      <svg width="1.000em" height="1em" viewBox="0 0 13 13" class="block__list-icon icon icon--check">
+                        <path d="M1.12 7.122L.272 8.139a.5.5 0 00.006.647l3.236 3.734a.5.5 0 00.785-.037L12.89.458a.225.225 0 00-.35-.283L4.324 9.24a.5.5 0 01-.76-.023l-1.67-2.087a.5.5 0 00-.774-.007z" />
+                      </svg> (ללוכ אל) 27 דע 18 םיאליג חווטב םישנ – ליג</li>
+                    <li class="block__list-item ">
+                      <svg width="1.000em" height="1em" viewBox="0 0 13 13" class="block__list-icon icon icon--check">
+                        <path d="M1.12 7.122L.272 8.139a.5.5 0 00.006.647l3.236 3.734a.5.5 0 00.785-.037L12.89.458a.225.225 0 00-.35-.283L4.324 9.24a.5.5 0 01-.76-.023l-1.67-2.087a.5.5 0 00-.774-.007z" />
+                      </svg> הגיהנ ןוישיר תולעב</li>
+                    <li class="block__list-item ">
+                      <svg width="1.000em" height="1em" viewBox="0 0 13 13" class="block__list-icon icon icon--check">
+                        <path d="M1.12 7.122L.272 8.139a.5.5 0 00.006.647l3.236 3.734a.5.5 0 00.785-.037L12.89.458a.225.225 0 00-.35-.283L4.324 9.24a.5.5 0 01-.76-.023l-1.67-2.087a.5.5 0 00-.774-.007z" />
+                      </svg> (רטסיביב ללוכ) םידלי םע הדובע ןויסינ</li>
+                    <li class="block__list-item ">
+                      <svg width="1.000em" height="1em" viewBox="0 0 13 13" class="block__list-icon icon icon--check">
+                        <path d="M1.12 7.122L.272 8.139a.5.5 0 00.006.647l3.236 3.734a.5.5 0 00.785-.037L12.89.458a.225.225 0 00-.35-.283L4.324 9.24a.5.5 0 01-.76-.023l-1.67-2.087a.5.5 0 00-.774-.007z" />
+                      </svg> תוחפל דומיל תונש 12</li>
+                    <li class="block__list-item ">
+                      <svg width="1.000em" height="1em" viewBox="0 0 13 13" class="block__list-icon icon icon--check">
+                        <path d="M1.12 7.122L.272 8.139a.5.5 0 00.006.647l3.236 3.734a.5.5 0 00.785-.037L12.89.458a.225.225 0 00-.35-.283L4.324 9.24a.5.5 0 01-.76-.023l-1.67-2.087a.5.5 0 00-.774-.007z" />
+                      </svg> הריבס המרב תילגנא</li>
+                    <li class="block__list-item ">
+                      <svg width="1.000em" height="1em" viewBox="0 0 13 13" class="block__list-icon icon icon--check">
+                        <path d="M1.12 7.122L.272 8.139a.5.5 0 00.006.647l3.236 3.734a.5.5 0 00.785-.037L12.89.458a.225.225 0 00-.35-.283L4.324 9.24a.5.5 0 01-.76-.023l-1.67-2.087a.5.5 0 00-.774-.007z" />
+                      </svg> הניקת תואירב</li>
+                  </ul>
+                  <!-- end block__list-->
+                </div>
+              </div>
             </div>
           </div>
           <!-- end blocks -->

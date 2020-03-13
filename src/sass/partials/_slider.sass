@@ -42,30 +42,73 @@
   color: $white
 
   display: inline-flex !important
+  flex-wrap: wrap
 
   direction: rtl
   font-size: 1rem !important
+
   +not-rtl
     direction: ltr
+
+  +lg
+    padding-left: rem(50)
+    padding-right: rem(50)
+
+  +md
+    padding-left: rem(15)
+    padding-right: rem(15)
 
   &__title
     margin-bottom: rem(50)
     margin-top: rem(-70)
     text-align: left
+
+    +sm
+      margin-top: auto
+      order: 0
+      margin-bottom: rem(15)
+      text-align: center
   
   &__btn
     text-align: left
+    +sm
+      order: 1
+      text-align: center
 
   &__img
     width: percentage(335 / 1203)
     font-size: 0
     margin-bottom: rem(-35) + rem(-70)  // padding bottom + offset
 
+    +vertical
+
+    .lazy--loaded
+      display: inline-block
+      vertical-align: bottom
+
+    +sm
+      width: 100%
+      margin-bottom: rem(15)
+      order: 1
+
   &__content
     width: percentage((1203 - 335) / 1203)
+    +sm
+      width: 100%
+
+      display: flex
+      flex-direction: column
+
 
   &__quote
+    max-width: 100%
     margin-right: auto
     margin-left: rem(-19)
     margin-top: rem(-60) + rem(-22) // padding top + offset
+
+    +sm
+      margin-top: 0
+      order: 2
+      margin-left: auto
+      margin-right: auto
     

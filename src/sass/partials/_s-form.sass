@@ -5,14 +5,32 @@
   padding-top: rem(45)
   padding-bottom: rem(103)
 
+  +lg
+    padding-bottom: rem(50)
+
+  +md
+    padding: rem(30) 0
+
   &__img-wrap
     width: rem(575)
+    max-width: 45%
     padding-top: rem(17)
 
+    +xs
+      width: 100%
+      max-width: none
+      margin-bottom: rem(30)
+
   &__form-wrap
-    width: calc(100% - #{rem(575)})
+    width: 100%
+    max-width: 55%
+    // width: calc(100% - #{rem(575)})
     padding-left: rem(15)
     padding-right: rem(15)
+
+    +xs
+      max-width: none
+      order: 1
 
   &__form
     max-width: rem(438)
@@ -22,12 +40,12 @@
     position: relative
     font-size: 0
 
-    padding: 0 0 rem(39) rem(70)
+    padding: 0 0 7% 12%
     +before
       position: absolute
       z-index: 0
-      top: rem(32)
-      right: rem(95)
+      top: 7%
+      right: 15%
       bottom: 0
       left: 0
 

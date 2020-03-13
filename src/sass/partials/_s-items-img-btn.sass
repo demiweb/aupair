@@ -8,9 +8,17 @@
   padding: rem(61) rem(85)
   background-color: $accent-thrd
 
+  +lg
+    padding: rem(40) rem(50)
+
+  +md
+    padding: rem(30) rem(15)
+
   &__item
     +notlast
       margin-bottom: rem(40)
+      +md
+        margin-bottom: rem(20)
 
 .item-img-btn
   background-color: $white
@@ -23,14 +31,45 @@
     padding-left: 0
     padding-right: rem(21)
 
+  +sm
+    flex-wrap: wrap
+
+    padding-left: 0 !important
+    padding-right: 0 !important
+    padding-bottom: rem(15)
+
+  +xs
+    text-align: center
+
   &__img
     font-size: 0
-    height: 100%
     &--gap
       padding: rem(15) rem(30)
+
+    +sm
+      width: 30%
+
+    +xs
+      width: 100%
+      margin-bottom: rem(15)
 
   &__text
     font-size: em(18)
     padding-left: rem(14)
     padding-right: rem(14)
     flex-grow: 1
+
+    +sm
+      width: 70%
+
+    +xs
+      width: 100%
+
+  &__btn
+    +sm
+      width: 100%
+      margin-top: rem(15)
+      text-align: center
+
+      padding-left: rem(15)
+      padding-right: rem(15)

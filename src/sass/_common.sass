@@ -22,6 +22,10 @@ body
   &--loaded:not(#{$this}--no-fade-in)
     animation: fadeIn 1s
 
+.out
+  +md
+    padding-top: $header-height-md
+
 .quote
   color: $c-text
   font-size: rem(336)
@@ -35,8 +39,18 @@ body
   background-position: 50% 50%
   background-size: contain
 
+  +md
+    font-size: rem(280)
+
+  +xs
+    font-size: rem(200)
+  +xxs
+    font-size: rem(170)
+
   &__inner
-    font-size: rem(30)
+    font-size: em(30, 336)
+    max-height: 5.1em
+    overflow: hidden
 
 
 .section-block
@@ -63,6 +77,9 @@ body
   background-color: $accent
   color: $white
 
+  +sm
+    min-width: rem(300)
+
   &--accent-sec
     background-color: $accent-sec
 
@@ -74,12 +91,25 @@ body
 .text-photos
   padding-left: rem(25)
   padding-right: rem(25)
+
+  +xs
+    padding-left: rem(15)
+    padding-right: rem(15)
+
   &__block
     margin-bottom: rem(75)
     &:nth-child(1)
       padding-right: rem(70)
+      +lg
+        padding-right: rem(15)
     &:nth-child(2)
       padding-left: rem(80)
+      +lg
+        padding-left: rem(15)
+
+    +xs
+      padding-left: 0 !important
+      padding-right: 0 !important
 
 .text-photos-block
   $this: &
@@ -90,14 +120,37 @@ body
   margin-left: rem(-25)
   margin-right: rem(-25)
 
+  +xs
+    margin-left: 0
+    margin-right: 0
+
   &__text
     width: percentage(871 / 1352)
     padding-left: rem(25)
     padding-right: rem(25)
+    +lg
+      padding-left: 0
+      padding-right: 0
+
+    +xs
+      width: 100%
+      order: 1
+
   &__img
     width: percentage((1352 - 871) / 1352)
     padding-left: rem(25)
     padding-right: rem(25)
+
+    +xs
+      width: 100%
+      margin-bottom: rem(15)
+      padding-left: 0
+      padding-right: 0
+      margin-right: rem(-15)
+
+      +not-rtl
+        margin-right: 0
+        margin-left: rem(-15)
 
   &--right
     margin-right: rem(-50)
@@ -106,11 +159,25 @@ body
       margin-right: 0
       margin-left: rem(-50)
 
+    +xs
+      margin-left: 0 !important
+      margin-right: 0 !important
+
+
   &--sm
     #{$this}__img
       width: 50%
+      +xs
+        width: 100%
+
+        margin-left: 0 !important
+        margin-right: 0 !important
+
+        text-align: center
     #{$this}__text
       width: 50%
+      +xs
+        width: 100%
 
 
 .text-img
@@ -167,17 +234,31 @@ body
 
   &__subttl
     margin-bottom: rem(20)
+    padding-left: rem(15)
+    padding-right: rem(15)
 
   &__imgs
     float: left
-    margin-right: rem(40)
+    
     width: 30%
     padding-top: 60%
+
+    margin-right: rem(40)
+    margin-bottom: rem(40)
 
     +not-rtl
       float: right
       margin-right: 0
       margin-left: rem(40)
+
+    +r(1660)
+      padding-top: 70%
+      width: 37%
+
+    +xs
+      float: none
+      margin-left: auto
+      margin-right: auto
 
   &__block
     margin-bottom: rem(39)
@@ -190,8 +271,13 @@ body
       padding-right: rem(20)
       padding-left: rem(48)
 
+    +lg
+      padding-left: rem(15) !important
+      padding-right: rem(15) !important
+
 .right-images
   position: relative
+
   &__img
     position: absolute
     display: inline-block
@@ -209,33 +295,37 @@ body
       left: 0
       z-index: 0
 
-      padding: rem(30)
+      padding: 3%
       padding-right: 0
       +before
         background-color: $accent-thrd
         top: 0
         bottom: 0
         left: 0
-        right: rem(30)
+        right: 3%
+
     &:nth-child(2)
       top: 35%
       right: 0
       z-index: 1
+      max-width: 60%
 
-      padding: rem(19) rem(18)
+      padding: 4%
       padding-bottom: 0
       +before
         background-color: $accent-sec
         top: 0
         left: 0
         right: 0
-        bottom: rem(100)
+        bottom: 40%
+
     &:nth-child(3)
       bottom: 0
       left: 0
       z-index: 0
+      max-width: 50%
 
-      padding: rem(30)
+      padding: 5%
       padding-left: 0
       +before
         background-color: $accent
@@ -243,14 +333,16 @@ body
         bottom: 0
         right: 0
         left: 0
-    &:nth-child(4)
-      bottom: 5%
-      right: 10%
 
-      padding: 0 rem(16) rem(9) 0
+    &:nth-child(4)
+      bottom: 3%
+      right: 10%
+      max-width: 40%
+
+      padding: 0 3% 2% 0
       +before
         background-color: $accent-thrd
         bottom: 0
         right: 0
-        top: rem(15)
-        left: rem(24)
+        top: 8%
+        left: 10%

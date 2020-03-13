@@ -2,11 +2,31 @@
 <div class="blocks">
   {% for i in blocks %}
   <div class="blocks__item">
-    <a href="#" class="block{% if i.mod %} {{ i.mod }}{% endif %}">
-      <span
-        class="block__title title{% if i.titleMod %} {{ i.titleMod }}{% else %} title--h2{% endif %}"
-      >{{ i.title | safe }}</span>
-    </a>
+    <div class="block{% if i.mod %} {{ i.mod }}{% endif %}">
+      <button class="block__btn js-dropdown-btn">
+        <span
+          class="block__title title{% if i.titleMod %} {{ i.titleMod }}{% else %} title--h2{% endif %}"
+        >{{ i.title | safe }}</span>
+      </button>
+
+      <div class="block__list-wrap js-dropdown-item">
+        <div class="block__list-title">תחלצומה תינכותב ליעפ קלח תחקל תוצור תובר תונב :םימדקומ םיאנת המכ םנשי ךא הקירמא ןיא רפוא לש</div>
+
+        {{ mixins.list(
+          name = 'block__list',
+          modifications = { wrap: '', item: 'block__list-item', link: '' },
+          list = [
+            { item: mixins.icon('check', 'block__list-icon') + '(ללוכ אל) 27 דע 18 םיאליג חווטב םישנ – ליג' },
+            { item: mixins.icon('check', 'block__list-icon') + 'הגיהנ ןוישיר תולעב' },
+            { item: mixins.icon('check', 'block__list-icon') + '(רטסיביב ללוכ) םידלי םע הדובע ןויסינ' },
+            { item: mixins.icon('check', 'block__list-icon') + 'תוחפל דומיל תונש 12' },
+            { item: mixins.icon('check', 'block__list-icon') + 'הריבס המרב תילגנא' },
+            { item: mixins.icon('check', 'block__list-icon') + 'הניקת תואירב' }
+          ]
+        ) }}
+      </div>
+    </div>
+    
   </div>
   {% endfor %}
 </div>

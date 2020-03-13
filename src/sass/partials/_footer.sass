@@ -6,9 +6,18 @@
     padding: rem(70) rem(122) rem(58) rem(40)
     display: flex
 
+    +md
+      padding-left: rem(15)
+      padding-right: rem(15)
+
   &__meta
     flex-grow: 1
+    padding-left: 1rem
+    +not-rtl
+      padding-left: 0
+      padding-right: 1rem
     
   &__meta-item
       +notlast
         margin-bottom: rem(20)
+        

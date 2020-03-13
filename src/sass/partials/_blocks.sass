@@ -15,33 +15,105 @@
     padding-right: rem(12)
     margin-bottom: rem(24)
 
+    +md
+      width: 50%
+    +xs
+      width: 100%
+
 .block
-  display: flex
-  flex-direction: column
-  justify-content: space-between
-  align-items: center
+  $this: &
 
   height: 100%
-  color: $white
-  // min-height: rem(164)
-  padding: rem(32) rem(50) rem(14)
-  text-align: center
-  background-color: $accent
-  position: relative
 
-  +after
-    +arr(2.5em, 1em, currentColor, b)
-    // position: absolute
+  &__btn
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    align-items: center
+    
+    width: 100%
+    height: 100%
+
+    color: $white    
+    text-align: center
+    background-color: $accent
+    position: relative
+
+    padding: rem(32) rem(50) rem(14)
+
+    +tr(background-color .3s)
+    +hover
+      background-color: $accent-dark
+
+    +after
+      +arr(2.5em, 1em, currentColor, b)
+
+    +lg
+      padding: rem(20) rem(20) rem(14)
+
+    +md
+      padding: rem(14)
+
+    &--active
+      height: auto
+      margin-bottom: rem(3)
 
   &__title
     margin-bottom: rem(15)
     flex-grow: 1
     display: flex
-    align-items: center
+    align-items: center    
+
+  &__list-wrap
+    background-color: $accent    
+
+    max-height: 0
+    overflow: hidden
+
+    +tr(max-height .4s)
+
+  &__list-title
+    margin-bottom: rem(30)
+    padding: rem(34) rem(22) 0 rem(62)
+    +xs
+      padding: rem(30) rem(15) 0
+  
+  &__list
+    font-size: em(14)
+    font-weight: 400
+
+    padding: 0 rem(22) rem(52) rem(62)
+
+    +xs
+      padding: 0 rem(15) rem(30)
+
+  &__list-item
+    +notlast
+      margin-bottom: rem(5)
+  
+  &__list-icon
+    fill: $white
+    margin-left: .5em
+
+    +not-rtl
+      margin-left: 0
+      margin-right: .5em
+
 
   &--accent-sec
-    background-color: $accent-sec
+    #{$this}__btn, #{$this}__list-wrap
+      background-color: $accent-sec
 
-  &--accent-thrd
-    color: $dark-aux
-    background-color: $accent-thrd
+    #{$this}__btn
+      +hover
+        background-color: $accent-sec-dark
+
+  &--accent-thrd    
+    #{$this}__btn, #{$this}__list-wrap
+      background-color: $accent-thrd
+
+    #{$this}__btn
+      color: $dark-aux
+      +hover
+        background-color: $accent-thrd-dark
+      

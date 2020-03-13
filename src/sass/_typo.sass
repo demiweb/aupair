@@ -3,12 +3,24 @@
 
   &--h1
     font-size: em(60)
+    +md
+      font-size: em(50)
+    +xs
+      font-size: em(40)
 
   &--h2
     font-size: em(36)
+    +md
+      font-size: em(30)
+    +xs
+      font-size: em(24)
 
   &--h3
     font-size: em(26)
+    +md
+      font-size: em(22)
+    +xs
+      font-size: em(20)
 
   &--h4
     font-size: em(18)
@@ -54,7 +66,7 @@
 .list
   &__item
     position: relative
-    padding-right: rem(30)
+    padding-right: 30px
     margin-bottom: rem(15)
 
     +not-rtl
@@ -69,3 +81,6 @@
     +not-rtl
       right: auto
       left: 0
+
+    +sm
+      top: -.2em

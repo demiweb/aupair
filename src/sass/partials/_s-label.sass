@@ -2,6 +2,10 @@
   padding-top: rem(44)
   padding-bottom: rem(30)
 
+  &__title
+    padding-left: rem(15)
+    padding-right: rem(15)
+
   &__prices
     margin-bottom: rem(55)
 
@@ -12,15 +16,30 @@
   padding-top: rem(40)
   padding-bottom: rem(75)
 
+  +lg
+    padding-bottom: rem(40)
+
   &__block-sm
     max-width: 1090px
     margin: 0 auto
     align-items: center
     margin-bottom: rem(45)
+    padding-left: rem(15)
+
+    +not-rtl
+      padding-left: 0
+      padding-right: rem(15)
+
+    +xs
+      padding-left: rem(15) !important
+      padding-right: rem(15) !important
 
 .s-label-dates
   padding-top: rem(75)
   padding-bottom: rem(30)
+
+  +lg
+    padding-top: rem(30)
 
 .s-label-blocks
   padding-top: rem(30)
@@ -34,19 +53,36 @@
     display: flex
     align-items: center
     flex-wrap: wrap
+
     margin-bottom: rem(54)
+
+    +md
+      align-items: flex-start
 
   &__img-wrap
     width: rem(316)
+    max-width: 30%
+    +xs
+      max-width: none
+      width: 100%
+      margin-bottom: rem(15)
 
   &__content
-    width: calc(100% - #{rem(316)})
+    max-width: 70%
+    width: 100%
     padding: 0 rem(63)
+
+    +lg
+      padding: 0 rem(15)
+
+    +xs
+      max-width: none
 
   &__img
     position: relative
-    padding: rem(30) rem(80)
+    padding: 7% 25%
     padding-left: 0
+
     +before
       background-color: $accent
       position: absolute
@@ -55,6 +91,7 @@
       right: 0
       bottom: 0
       left: rem(80)
+
     img
       position: relative
       z-index: 1
@@ -65,13 +102,25 @@
     flex-wrap: wrap
 
     max-width: 1110px
-    margin: 0 auto
+    padding-left: rem(15)
+    padding-right: rem(15)
 
+    margin: 0 auto
     margin-bottom: rem(109)
+
+    +lg
+      margin-bottom: rem(80)
+
+    +md
+      margin-bottom: rem(30)
+
 
   &__list-block
     width: 50%
     padding-left: rem(15)
+
+    +xs
+      width: 100%
 
   &__block-title
     margin-bottom: rem(40)
@@ -83,11 +132,17 @@
   &__text
     max-width: 1110px
     margin: 0 auto
+    padding: 0 rem(15)
 
 
 .s-label-img-blocks
   padding-top: rem(45)
   padding-bottom: rem(107)
+
+  +lg
+    padding-bottom: rem(80)
+  +md
+    padding-bottom: rem(45)
 
   &__block
     display: flex
@@ -95,14 +150,30 @@
 
     margin-bottom: rem(78)
 
+    +lg
+      margin-bottom: rem(50)
+    +md
+      margin-bottom: rem(30)
+
   &__img-wrap
     width: rem(550)
+    max-width: 40%
+    +xs
+      max-width: none
+      width: 100%
 
   &__text
-    width: calc(100% - #{rem(550)})
+    width: 100%
+    max-width: 60%
+
     padding-left: rem(64)
     padding-right: rem(65)
     padding-top: rem(80)
+
+    +lg
+      padding: rem(15)
+    +xs
+      max-width: none
 
   &__text-in
     max-width: rem(616)
@@ -111,13 +182,13 @@
     position: relative
     font-size: 0
 
-    padding: 0 0 rem(21) rem(16)
+    padding: 0 0 5% 3%
     +before
       position: absolute
       z-index: 0
       background-color: $accent-thrd
 
-      top: rem(96)
+      top: 25%
       bottom: 0
       left: 0
       right: 0

@@ -1,5 +1,7 @@
 .s-color-titles
   display: flex
+  flex-wrap: wrap
+
   padding-top: rem(81)
   padding-bottom: rem(96)
   padding-left: rem(72)
@@ -7,6 +9,16 @@
   +not-rtl
     padding-left: 0
     padding-right: rem(72)
+
+  +lg
+    align-items: flex-start
+
+    padding-top: rem(60)
+    padding-bottom: rem(60)
+    padding-left: rem(15)
+    +not-rtl
+      padding-left: 0
+      padding-right: rem(15)
 
 
   &__img
@@ -31,6 +43,10 @@
       position: relative
       z-index: 1
 
+    +xs
+      width: 100%
+      margin-bottom: rem(30)
+
   &__content
     display: flex
     flex-direction: column
@@ -43,3 +59,11 @@
       padding-right: 0
       padding-left: rem(40)
 
+    +lg
+      padding-right: rem(15)
+      +not-rtl
+        padding-right: 0
+        padding-left: rem(15)
+
+    +xs
+      width: 100%

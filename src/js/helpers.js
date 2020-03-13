@@ -65,3 +65,11 @@ export const BEMblock = (node, block) => {
 //   setProperty()
 //   window.addEventListener('resize', setPropertyDebounced)
 // }
+
+export function slideUp(node) {
+  node.style.maxHeight = ''
+}
+
+export function slideDown(node) {
+  node.style.maxHeight = `${node.scrollHeight}px`
+}

@@ -1,5 +1,5 @@
 import { IS_ACTIVE, IS_OPEN } from '../../constants'
-import { BEMblock } from '../../helpers'
+import { BEMblock, slideUp, slideDown } from '../../helpers'
 import classes from '../../classNames'
 
 const classNames = classes.menu
@@ -92,6 +92,12 @@ export default class Menu {
     if (!this.BEMtarget.containsMod(IS_OPEN) && this.onClose) {
       this.onClose()
     }
+
+    if (this.BEMtarget.containsMod(IS_OPEN)) {
+      slideDown(this.BEMtarget.node)
+    } else {
+      slideUp(this.BEMtarget.node)
+    }
   }
 
   close() {
@@ -114,6 +120,8 @@ export default class Menu {
         }
       })
     })
+
+    slideUp(this.BEMtarget.node)
 
     if (this.onClose) this.onClose()
   }
