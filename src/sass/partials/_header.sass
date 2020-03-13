@@ -66,9 +66,15 @@
   &__contact
     +notlast
       margin-left: rem(60)
+      +not-rtl
+        margin-left: 0
+        margin-right: rem(60)
     a
       display: inline-flex
       align-items: center
       .icon
         font-size: 1.4em
         margin-right: .5em
+        +not-rtl
+          margin-right: 0
+          margin-left: .5em

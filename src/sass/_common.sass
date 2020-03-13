@@ -102,6 +102,10 @@ body
   &--right
     margin-right: rem(-50)
 
+    +not-rtl
+      margin-right: 0
+      margin-left: rem(-50)
+
   &--sm
     #{$this}__img
       width: 50%
@@ -170,12 +174,21 @@ body
     width: 30%
     padding-top: 60%
 
+    +not-rtl
+      float: right
+      margin-right: 0
+      margin-left: rem(40)
+
   &__block
     margin-bottom: rem(39)
 
   &__content
     padding-right: rem(48)
     padding-left: rem(20)
+
+    +not-rtl
+      padding-right: rem(20)
+      padding-left: rem(48)
 
 .right-images
   position: relative

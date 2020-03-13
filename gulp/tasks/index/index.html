@@ -2,7 +2,7 @@
 <html>
 <head lang="en">
   <meta charset="UTF-8">
-  <title><%= pages.ProjectTitle %></title>
+  <title><%= pages[0].ProjectTitle %></title>
   <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <style>
@@ -95,6 +95,10 @@
       display: inline-block;
     }
 
+    .pagelist__sublist {
+      margin-left: 16px;
+    }
+
     .no-touch .pagelist__title:hover{
       background: var(--accent);
       color: var(--white);
@@ -116,17 +120,26 @@
 </head>
 <body>
   <section>
-    <ol class="pagelist">
+    <ul class="pagelist">
       <% i = 0; %>
-      <% _.each(pages.PageList, function(page) { i++; %>
-          <li>
-            <a class="pagelist__title" target="_blank" href="<%= page.file %>">
-              <em><%= _.split(page.file, '.', 1) %></em>
-              <iframe width="1600" height="1000" data-src="<%= page.file %>"  frameborder="0"></iframe>
-            </a>            
-          </li>
+      <% _.each(pages, function(block) { i++; %>
+        <li>
+          <strong><%= block.lang %></strong>
+          <ol class="pagelist__sublist">
+            <% j = 0; %>
+            <% _.each(block.PageList, function(page) { j++; %>
+            <% name = _.split(page.file, '.', 1) + '-' + block.lang; %>
+              <li>
+                <a class="pagelist__title" target="_blank" href="<%= name + '.html' %>">
+                  <em><%= name %></em>
+                  <iframe width="1600" height="1000" data-src="<%= name + '.html' %>"  frameborder="0"></iframe>
+                </a>
+              </li>
+            <% }) %> 
+          </ol>
+        </li>
         <% }) %>  
-    </ol>
+    </ul>
   </section>
 
   <script>

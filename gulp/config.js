@@ -10,6 +10,7 @@ const config = {
   src: {
     root: 'src',
     templates: 'src/templates',
+    contentData: 'src/content',
     templatesData: 'src/templates/data',
     pagelist: 'src/index.yaml',
     sass: 'src/sass',
