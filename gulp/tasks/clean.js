@@ -1,12 +1,10 @@
-import del from 'del';
-import util from 'gulp-util';
-import config from '../config';
+import del from 'del'
+import colors from 'ansi-colors'
+import log from 'fancy-log'
+import { dest } from '../config'
 
-const build = () => function () {
-  return del([
-    config.dest.root,
-  ])
-    .then((paths) => util.log('Deleted:', util.colors.magenta(paths.join('\n'))));
-};
+const build = () => () => {
+  return del([dest.root]).then(paths => log('Deleted:', colors.magenta(paths.join('\n'))))
+}
 
-module.exports.build = build;
+module.exports.build = build

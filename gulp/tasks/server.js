@@ -1,37 +1,33 @@
-import gulp from 'gulp';
-import browseeSync from 'browser-sync';
-import util from 'gulp-util';
-import config from '../config';
+import gulp from 'gulp'
+import browseeSync from 'browser-sync'
+import { src, dest, production } from '../config'
+const env = require('minimist')(process.argv.slice(2))
 
-const server = browseeSync.create();
+const server = browseeSync.create()
 
-gulp.task('server', (done) => {
+gulp.task('server', done => {
   server.init({
     server: {
-      baseDir: !config.production ? [config.dest.root, config.src.root] : config.dest.root,
+      baseDir: !production ? [dest.root, src.root] : dest.root,
       directory: false,
       serveStaticOptions: {
         extensions: ['html'],
       },
     },
-    files: [
-      `${config.dest.html}/*.html`,
-      `${config.dest.css}/*.css`,
-      `${config.dest.img}/**/*`,
-    ],
-    port: util.env.port || 8080,
+    files: [`${dest.html}/*.html`, `${dest.css}/*.css`, `${dest.img}/**/*`],
+    port: env.port || 8080,
     logLevel: 'info', // 'debug', 'info', 'silent', 'warn'
     logConnections: false,
     logFileChanges: true,
-    open: Boolean(util.env.open),
+    open: Boolean(env.open),
     notify: false,
     ghostMode: false,
-    online: Boolean(util.env.tunnel),
-  });
-  done();
-});
+    online: Boolean(env.tunnel),
+  })
+  done()
+})
 
-const build = (gulp) => gulp.parallel('server');
+const build = gulp => gulp.parallel('server')
 
-module.exports.build = build;
-module.exports.server = server;
+module.exports.build = build
+module.exports.server = server
