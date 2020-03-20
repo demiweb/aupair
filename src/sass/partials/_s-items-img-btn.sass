@@ -1,12 +1,15 @@
 .s-items-img-btn
+  padding-top: rem(50)
   &__title
     text-align: center
     margin-bottom: rem(53)
 
 
 .items-img-btn
+  $this: &
   padding: rem(61) rem(85)
   background-color: $accent-thrd
+  // min-height: 
 
   +lg
     padding: rem(40) rem(50)
@@ -19,6 +22,30 @@
       margin-bottom: rem(40)
       +md
         margin-bottom: rem(20)
+
+    &:nth-child(4)
+      +xlmin
+        .item-img-btn__img
+          flex: 0 0 rem(270)
+        .item-img-btn__text
+          padding-right: 0
+
+    &:nth-child(5)
+      +xlmin
+        .item-img-btn__img
+          flex: 0 0 rem(616)
+        .item-img-btn__text
+          padding-right: 0
+
+    &:nth-child(6)
+      +xlmin
+        .item-img-btn__img
+          flex: 0 0 rem(175)
+        .item-img-btn__text
+          padding-right: 0
+
+
+
 
 .item-img-btn
   background-color: $white
@@ -40,6 +67,14 @@
 
   +xs
     text-align: center
+
+  &__btn
+    color: $white
+    .btn
+      padding-left: rem(20)
+      padding-right: rem(20)
+      min-width: rem(210)
+
 
   &__img
     font-size: 0

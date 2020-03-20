@@ -38,7 +38,8 @@
     margin-bottom: rem(10)
 
   &__title
-    margin-bottom: rem(34)
+    +notlast
+      margin-bottom: rem(34)
 
   &__btns
     max-width: rem(632)
@@ -66,6 +67,8 @@
 
     #{$this}__inner
       padding: rem(30) rem(154)
+    #{$this}__upttl
+      letter-spacing: 0.285em
 
   &--desctop-7
     #{$this}__inner

@@ -46,7 +46,7 @@
       background-color: $accent-dark
 
     +after
-      +arr(2.5em, 1em, currentColor, b)
+      +arr(3.35em, 1.4em, currentColor, b)
 
     +lg
       padding: rem(20) rem(20) rem(14)
@@ -73,6 +73,7 @@
     +tr(max-height .4s)
 
   &__list-title
+    line-height: 1.6
     margin-bottom: rem(30)
     padding: rem(34) rem(22) 0 rem(62)
     +xs
@@ -98,7 +99,14 @@
     +not-rtl
       margin-left: 0
       margin-right: .5em
+  
 
+  &--lg
+    #{$this}__btn
+      padding-top: rem(42)
+
+    #{$this}__title
+      margin-bottom: rem(37)
 
   &--accent-sec
     #{$this}__btn, #{$this}__list-wrap

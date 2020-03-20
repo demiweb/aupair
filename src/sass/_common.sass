@@ -62,6 +62,7 @@ body
 
   &__text
     font-weight: 400
+    line-height: 1.7
 
 .section-btn
   color: $white
@@ -128,6 +129,10 @@ body
     width: percentage(871 / 1352)
     padding-left: rem(25)
     padding-right: rem(25)
+    line-height: 1.7
+    p
+      +notlast
+        margin-bottom: rem(45)
     +lg
       padding-left: 0
       padding-right: 0
@@ -231,11 +236,16 @@ body
 
 .right-images-block
   +clr
+  .title
+    margin-bottom: rem(5)
 
   &__subttl
     margin-bottom: rem(20)
     padding-left: rem(15)
     padding-right: rem(15)
+  
+  &__text
+    line-height: 1.7
 
   &__imgs
     float: left
@@ -295,18 +305,24 @@ body
       left: 0
       z-index: 0
 
-      padding: 3%
+      padding: 4%
       padding-right: 0
       +before
         background-color: $accent-thrd
         top: 0
         bottom: 0
         left: 0
-        right: 3%
+        right: 4%
+
+      +xlmin
+        padding: rem(31)
+        padding-right: 0
+        +before
+          right: rem(31)
 
     &:nth-child(2)
-      top: 35%
-      right: 0
+      top: 31%
+      right: 7%
       z-index: 1
       max-width: 60%
 
@@ -317,7 +333,12 @@ body
         top: 0
         left: 0
         right: 0
-        bottom: 40%
+        bottom: 25%
+
+      +xlmin
+        padding: rem(19) rem(16)
+        +before
+          bottom: rem(101)
 
     &:nth-child(3)
       bottom: 0
@@ -334,8 +355,12 @@ body
         right: 0
         left: 0
 
+      +xlmin
+        padding: rem(30)
+        padding-left: 0
+
     &:nth-child(4)
-      bottom: 3%
+      bottom: 5%
       right: 10%
       max-width: 40%
 
