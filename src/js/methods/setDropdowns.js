@@ -32,9 +32,9 @@ export default () => {
     const item = wrap.querySelector(`.${classNames.dropdown.item}`)
     const allBtns = [...container.querySelectorAll(`.${classNames.dropdown.btn}`)]
 
-    const btnsHeights = allBtns.map(button => button.offsetHeight)
+    // const btnsHeights = allBtns.map(button => button.offsetHeight)
 
-    const btnHeight = Math.max(...btnsHeights)
+    // const btnHeight = Math.max(...btnsHeights)
 
     if (BEMblock(btn, 'block__btn').containsMod(IS_ACTIVE)) {
       BEMblock(btn, 'block__btn').removeMod(IS_ACTIVE)
@@ -44,13 +44,14 @@ export default () => {
 
       item.addEventListener('transitionend', onTransitionEnd)
     } else {
+      allBtns.forEach(button => {
+        const { height } = button.getBoundingClientRect()
+        button.style.height = `${height}px`
+      })
+
       BEMblock(btn, 'block__btn').addMod(IS_ACTIVE)
       BEMblock(item, 'block__list-wrap').addMod(IS_OPEN)
-
       slideDown(item)
-      allBtns.forEach(button => {
-        button.style.height = `${btnHeight}px`
-      })
 
       item.removeEventListener('transitionend', onTransitionEnd)
     }
