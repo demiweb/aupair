@@ -8,12 +8,25 @@
     +xs
       font-size: em(40)
 
+  &--h1-md
+    font-size: em(55)
+    +md
+      font-size: em(50)
+    +xs
+      font-size: em(40)
+
   &--h2
     font-size: em(36)
     +md
       font-size: em(30)
     +xs
       font-size: em(24)
+
+  &--h2-sm
+    font-size: em(30)
+    +xs
+      font-size: em(24)
+
 
   &--h3
     font-size: em(26)
@@ -53,7 +66,11 @@
     font-weight: 400
 
 .order-list
-  +counter('order', '.')
+  $this: &
+  
+  &:not(#{$this}--manual)
+    +counter('order', '.')
+
   +notlast
     margin-bottom: rem(40)
   &__item
@@ -64,14 +81,27 @@
     +notlast
       margin-bottom: rem(5)
     &::before
-      color: $accent-sec
-      font-size: em(38)
-      font-weight: 700
-      position: absolute
-      top: 0
-      right: 0
+      @extend #{$this}__nmb
+
+  &__nmb
+    color: $accent-sec
+    font-size: em(38)
+    font-weight: 700
+    position: absolute
+    top: 0
+    right: 0
+
+  &--accent
+    #{$this}__item
+      font-weight: inherit
+      #{$this}__nmb
+        color: $accent
+      &::before
+        color: $accent
 
 .list
+  $this: &
+
   &__item
     position: relative
     padding-right: 30px
@@ -92,3 +122,10 @@
 
     +sm
       top: -.2em
+
+  &--lg
+    #{$this}__item
+      padding-right: rem(50)
+      padding-top: rem(10)
+      +notlast
+        margin-bottom: rem(24)

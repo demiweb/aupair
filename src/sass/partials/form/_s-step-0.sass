@@ -1,0 +1,51 @@
+.s-step-0
+  &__title
+    margin-bottom: rem(23)
+
+  &__list
+    display: flex
+    flex-wrap: wrap
+
+    .order-list
+      width: 50%
+      margin-bottom: rem(-130)
+      padding-left: rem(15)
+      +lg
+        margin-bottom: rem(30)
+      +md
+        width: 100%
+        padding-left: 0
+
+      &__item
+        +notlast
+          margin-bottom: rem(30)
+      &:nth-child(2)
+        margin-top: rem(60)
+        +lg
+          margin-top: 0
+
+  &__img
+    padding: rem(45) rem(45) rem(35)
+    padding-top: 0
+    position: relative
+    max-width: rem(419)
+    margin-right: rem(80)
+
+    +xs
+      padding: 5% 5% 5%
+      padding-top: 0
+      margin-right: 0
+
+    img
+      width: 100%
+      position: relative
+      z-index: 1
+
+    +before
+      position: absolute
+      top: rem(39)
+      bottom: 0
+      left: 0
+      right: 0
+
+      background-color: $accent-thrd

@@ -206,6 +206,9 @@
 @function rem($size, $context: $base-fz)
   @return ($size/$context) * 1rem
 
+@function vw($size, $base-width: 1440)
+  @return ($size/$base-width) * 100vw
+
 =hidden
   visibility: hidden
   opacity: 0

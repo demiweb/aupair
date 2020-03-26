@@ -1,0 +1,107 @@
+.s-video
+  &__title-block
+    text-align: center
+    max-width: rem(600)
+    margin-left: auto
+    margin-right: auto
+
+    margin-bottom: rem(63)
+
+    +lg
+      margin-bottom: rem(40)
+    +md
+      margin-bottom: rem(30)
+
+  &__subttl
+    font-size: em(30)
+    line-height: 1.53
+    +md
+      font-size: em(24)
+    +xs
+      font-size: em(21)
+
+  &__content
+    width: 50%
+    padding-left: rem(15)
+    padding-bottom: rem(35)
+    +md
+      width: 100%
+      padding-left: 0
+
+  &__content-title
+    margin-bottom: rem(10)
+
+  &__content-subttl
+    margin-bottom: rem(33)
+
+  &__inner
+    position: relative
+    +md
+      display: flex
+      flex-wrap: wrap
+
+  &__left
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0
+    width: 50%
+
+    display: flex
+    flex-direction: column
+    justify-content: flex-end
+
+    overflow: hidden
+
+    +md
+      width: 100%
+      position: relative
+      margin-bottom: rem(30)
+      order: 1
+
+  &__right
+    width: 100%
+
+  &__img
+    max-width: rem(584) + rem(63)
+    width: 100%
+    margin-right: auto
+
+
+.s-video-img
+  position: relative
+  padding: rem(48) rem(63) rem(29)
+  padding-right: 0
+
+  +before
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0
+    right: rem(63)
+
+    background-color: $accent-thrd
+
+  &__title
+    // position: absolute
+    position: relative
+    z-index: 1
+    margin-top: rem(-30)
+    margin-bottom: rem(15)
+    right: rem(63) + rem(39)
+    padding-left: rem(63) + rem(39)
+    font-weight: 400
+  
+  &__img
+    position: relative
+    z-index: 1
+    font-size: 0
+    padding-top: percentage(329 / 584)
+    iframe
+      position: absolute
+      z-index: 1
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      object-fit: cover

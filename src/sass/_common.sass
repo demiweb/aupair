@@ -23,8 +23,23 @@ body
     animation: fadeIn 1s
 
 .out
+  $this: &
   +md
-    padding-top: $header-height-md
+    &:not(#{$this}--form)
+      padding-top: $header-height-md
+
+  .main
+    +md
+      padding-top: rem(30)
+
+.container
+  max-width: 1109px
+  padding-left: rem(15)
+  padding-right: rem(15)
+  margin: 0 auto
+  
+  &--lg
+    max-width: 1229px
 
 .quote
   color: $c-text
