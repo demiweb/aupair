@@ -24,13 +24,16 @@ body
 
 .out
   $this: &
-  +md
-    &:not(#{$this}--form)
-      padding-top: $header-height-md
 
-  .main
+  &:not(#{$this}--form)
+    padding-top: $header-height
     +md
-      padding-top: rem(30)
+      padding-top: $header-height-md
+      
+  &--form
+    .main
+      +md
+        padding-top: rem(30)
 
 .container
   max-width: 1109px
