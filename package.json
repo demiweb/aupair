@@ -115,6 +115,7 @@
     "intersection-observer": "^0.7.0",
     "lozad": "^1.14.0",
     "regenerator-runtime": "^0.13.3",
+    "throttle-debounce": "^2.1.0",
     "tiny-slider": "^2.9.2"
   }
 }

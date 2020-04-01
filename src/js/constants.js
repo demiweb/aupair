@@ -15,7 +15,7 @@ export const {
   // HAS_ERROR,
   // HAS_TEXT,
   // IS_VALID,
-  // IS_FIXED,
+  IS_FIXED,
 } = {
   IS_ACTIVE: 'active',
   IS_OPEN: 'open',
@@ -33,5 +33,5 @@ export const {
   // HAS_ERROR: 'error',
   // HAS_TEXT: 'has-text',
   // IS_VALID: 'valid',
-  // IS_FIXED: 'fixed',
+  IS_FIXED: 'fixed',
 }

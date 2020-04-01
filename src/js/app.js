@@ -15,6 +15,7 @@ import setLazy from './methods/setLazy'
 import setSliders from './methods/setSliders'
 import closeMenu from './methods/closeMenu'
 import setDropdowns from './methods/setDropdowns'
+import fixHeader from './methods/fixHeader'
 
 import Menu from './components/Menu/Menu'
 
@@ -24,6 +25,7 @@ class App {
     this.classNames = classNames
     this.dom = {
       body: document.body,
+      header: document.querySelector('.header'),
     }
 
     this.menu = new Menu({
@@ -42,6 +44,7 @@ class App {
       setSliders,
       closeMenu,
       setDropdowns,
+      fixHeader,
     }
 
     Object.values(this.methods).forEach(fn => fn(this))

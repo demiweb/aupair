@@ -1,13 +1,14 @@
 .header
   $this: & 
+  position: relative
+  z-index: 10  
 
-  &:not(#{$this}--sm)
-    position: fixed
-    z-index: 10
-    left: 0
-    right: 0
-    top: 0
-    box-shadow: 0 0 10px rgba($black, .15)
+  // &:not(#{$this}--sm)
+  //   position: fixed
+  //   left: 0
+  //   right: 0
+  //   top: 0
+  //   box-shadow: 0 0 10px rgba($black, .15)
 
   &__top
     background-color: $accent
@@ -53,7 +54,33 @@
   &__bottom
     background-color: $white
     position: relative
-    z-index: 2
+    z-index: 2   
+
+    &--fixed
+      position: fixed
+      left: 0
+      right: 0
+      top: 0
+
+      box-shadow: 0 0 10px rgba($black, .15)
+
+      #{$this}__bottom-in
+        flex-direction: row-reverse
+        align-items: flex-end
+
+        height: rem(80)
+        padding-top: 0
+
+        +md
+          height: $header-bottom-height-md
+
+      #{$this}__logo
+        margin-top: 0
+        margin-bottom: rem(10)
+        width: rem(100)
+        +md
+          width: rem(70)
+          margin-bottom: 0
 
   &__bottom-in
     display: flex
