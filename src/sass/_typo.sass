@@ -85,10 +85,10 @@
 
   &__nmb
     color: $accent-sec
-    font-size: em(38)
+    font-size: em(60)
     font-weight: 700
     position: absolute
-    top: 0
+    top: -.35em
     right: 0
 
   &--accent
@@ -98,6 +98,10 @@
         color: $accent
       &::before
         color: $accent
+
+  &--manual
+    #{$this}__item
+      padding-right: rem(60) !important
 
 .list
   $this: &
