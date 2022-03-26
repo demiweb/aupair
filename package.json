@@ -100,7 +100,7 @@
     "husky": "^4.2.3",
     "lint-staged": "^10.0.8",
     "lodash": "^4.17.15",
-    "minimist": "^1.2.5",
+    "minimist": "^1.2.6",
     "plugin-error": "^1.0.1",
     "postcss-csso": "^4.0.0",
     "prettier": "1.19.1",
